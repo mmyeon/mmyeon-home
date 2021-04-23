@@ -8,3 +8,10 @@ export const COLORS = {
   lightGreen: "#00C6AE",
   darkGray: "#333333",
 };
+
+export const FONTWEIGHT = {
+  medium: "500",
+  semiBold: "600",
+  bold: "700",
+  extraBold: "800",
+};
