@@ -14,7 +14,7 @@ const Container = styled.div`
     z-index: 10;
     top: 50%;
     transform: translate(0, -50%);
-    padding-left: 1.5em;
+    padding-left: 1.3em;
     width: 12.6em;
 
     > .title-container {
@@ -45,7 +45,15 @@ const Container = styled.div`
       line-height: 1.8;
       font-weight: ${FONTWEIGHT.regular};
       word-break: keep-all;
+      letter-spacing
     }
+  }
+
+  > .blob {
+    position: absolute;
+    width: 17em;
+    left: -1.5em;
+    top: 16em;
   }
 
   > .walking-girl {
@@ -80,6 +88,12 @@ const Home = () => {
           요가와 개를 사랑하고 지속적인 성장을 추구하는 개발자 임미연입니다.
         </p>
       </div>
+      <img
+        className="blob"
+        src="/assets/blob.png"
+        alt="blob
+      "
+      />
       <img
         className="walking-girl"
         src="/assets/landing-main.png"
