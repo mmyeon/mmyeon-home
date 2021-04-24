@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import HireMeButton from "../components/HireMeButton";
 import { COLORS, FONTWEIGHT } from "../styles/constant";
 
 const Container = styled.div`
@@ -42,10 +43,10 @@ const Container = styled.div`
 
     > .desc {
       font-size: 1.06em;
-      line-height: 1.8;
+      line-height: 1.6;
       font-weight: ${FONTWEIGHT.regular};
       word-break: keep-all;
-      letter-spacing
+      letter-spacing: 0.8px;
     }
   }
 
@@ -87,6 +88,7 @@ const Home = () => {
         <p className="desc">
           요가와 개를 사랑하고 지속적인 성장을 추구하는 개발자 임미연입니다.
         </p>
+        <HireMeButton />
       </div>
       <img
         className="blob"
