@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS, FONTWEIGHT } from "../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const ButtonContainer = styled.button`
   background: ${COLORS.orange};
@@ -11,7 +11,7 @@ const ButtonContainer = styled.button`
   border-radius: 0.6em;
   margin-top: 0.5em;
   font-family: "Poppins", sans-serif;
-  font-weight: ${FONTWEIGHT.extraBold};
+  font-weight: ${FONT_WEIGHT.extraBold};
   cursor: pointer;
 `;
 

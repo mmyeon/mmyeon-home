@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HireMeButton from "../components/HireMeButton";
-import { COLORS, FONTWEIGHT } from "../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const Container = styled.div`
   width: 100vw;
@@ -26,17 +26,17 @@ const Container = styled.div`
 
       > .name {
         font-size: 2.06em;
-        font-weight: ${FONTWEIGHT.bold};
+        font-weight: ${FONT_WEIGHT.bold};
       }
 
       > h2 {
         font-size: 1.6em;
-        font-weight: ${FONTWEIGHT.semiBold};
+        font-weight: ${FONT_WEIGHT.semiBold};
       }
 
       > .job {
         font-size: 2.5em;
-        font-weight: ${FONTWEIGHT.extraBold};
+        font-weight: ${FONT_WEIGHT.extraBold};
         line-height: 1.1;
       }
     }
@@ -44,7 +44,7 @@ const Container = styled.div`
     > .desc {
       font-size: 1.06em;
       line-height: 1.6;
-      font-weight: ${FONTWEIGHT.regular};
+      font-weight: ${FONT_WEIGHT.regular};
       word-break: keep-all;
       letter-spacing: 0.8px;
     }
