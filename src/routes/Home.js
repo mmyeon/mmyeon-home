@@ -92,19 +92,19 @@ const Home = () => {
       </div>
       <img
         className="blob"
-        src="/assets/blob.png"
+        src="/assets/images/blob.png"
         alt="blob
       "
       />
       <img
         className="walking-girl"
-        src="/assets/landing-main.png"
+        src="/assets/images/landing-main.png"
         alt="walking girl
       "
       />
       <img
         className="downward-arrow"
-        src="/assets/arrow-icon.png"
+        src="/assets/images/arrow-icon.png"
         alt="downward arrow
       "
       />
