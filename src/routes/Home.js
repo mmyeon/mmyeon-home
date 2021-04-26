@@ -47,6 +47,26 @@ const Container = styled.div`
       font-weight: ${FONT_WEIGHT.regular};
       word-break: keep-all;
       letter-spacing: 0.8px;
+
+      .highlight {
+        background: linear-gradient(180deg, transparent 57%, #29fea6 47%);
+        padding: 0 0.2em;
+        background-size: 150% 150%;
+        animation: gradient 2s cubic-bezier(0.4, 0, 1, 1);
+        animation-fill-mode: forwards;
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 0%;
+          }
+          50% {
+            background-position: 50% 50%;
+          }
+          100% {
+            background-position: 50% 50%;
+          }
+        }
+      }
     }
   }
 
@@ -86,7 +106,10 @@ const Home = () => {
           <h1 className="job">Frontend Developer</h1>
         </div>
         <p className="desc">
-          요가와 개를 사랑하고 지속적인 성장을 추구하는 개발자 임미연입니다.
+          <span className="highlight">요가</span>와{" "}
+          <span className="highlight">개</span>를 사랑하고{" "}
+          <span className="highlight">지속적인 성장</span>을 추구하는 개발자
+          <strong> 임미연</strong>입니다.
         </p>
         <HireMeButton />
       </div>
