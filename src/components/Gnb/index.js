@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HambergurBtn from "./HambergurBtn";
-import NavigationBar from "./NavigationBar";
+import NavBar from "./NavBar";
 
 const Gnb = () => {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -8,7 +8,7 @@ const Gnb = () => {
   return (
     <div>
       <HambergurBtn openNavBar={openNavBar} />
-      {isNavBarOpen && <NavigationBar closeNavBar={closeNavBar} />}
+      {isNavBarOpen && <NavBar closeNavBar={closeNavBar} />}
     </div>
   );
 
