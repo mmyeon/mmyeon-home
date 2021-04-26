@@ -13,6 +13,7 @@ const ButtonContainer = styled.button`
   font-family: "Poppins", sans-serif;
   font-weight: ${FONT_WEIGHT.extraBold};
   cursor: pointer;
+  letter-spacing: 2px;
 `;
 
 const Button = ({ title }) => {
