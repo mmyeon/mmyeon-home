@@ -4,7 +4,7 @@ import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 const NavBarContainer = styled.div`
   background: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: calc(100% - 6px);
@@ -24,7 +24,6 @@ const NavBarContainer = styled.div`
 
   > ul {
     height: calc(100% - 40px);
-    /* height: calc(100% - 72px); */
     display: flex;
     flex-direction: column;
     align-items: center;

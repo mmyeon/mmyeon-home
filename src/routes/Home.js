@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Gnb from "../components/Gnb";
 import HireMeButton from "../components/HireMeButton";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
@@ -99,8 +98,7 @@ const Container = styled.div`
 
 const Home = () => {
   return (
-    <Container>
-      <Gnb />
+    <Container id="home">
       <div className="text-container">
         <div className="title-container">
           <h1 className="name">Miyeon Lim,</h1>
