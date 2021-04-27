@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import Router from "./Router";
-import Learning from "./routes/Learning";
-import Project from "./routes/Project";
-import Contact from "./routes/Contact";
+import Learning from "./components/Learning";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
 import Gnb from "./components/Gnb";
 
 function App() {
