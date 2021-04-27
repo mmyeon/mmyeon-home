@@ -35,37 +35,27 @@ const NavBarContainer = styled.div`
       margin: 0.5em 0;
       border-bottom: 6px solid ${COLORS.lightSkyBlue};
       cursor: pointer;
+      text-transform: uppercase;
     }
   }
 `;
 
 const NavBar = ({ closeNavBar }) => {
+  const navBarList = ["home", "learning", "project", "contact"];
+
   return (
     <NavBarContainer>
       <div className="button-container">
         <button onClick={closeNavBar}>X</button>
       </div>
       <ul>
-        <li>
-          <a href="#home" onClick={closeNavBar}>
-            HOME
-          </a>
-        </li>
-        <li>
-          <a href="#learning" onClick={closeNavBar}>
-            LEARNING
-          </a>
-        </li>
-        <li>
-          <a href="#project" onClick={closeNavBar}>
-            PROJECT
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={closeNavBar}>
-            CONTACT
-          </a>
-        </li>
+        {navBarList.map((item) => (
+          <li key={item}>
+            <a href={`#${item}`} onClick={closeNavBar}>
+              {item}
+            </a>
+          </li>
+        ))}
       </ul>
     </NavBarContainer>
   );
