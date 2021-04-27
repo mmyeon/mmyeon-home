@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
         width:100vw;
         height:100vh;
         font-family: 'Poppins', sans-serif;
-        color:${COLORS.darkGray}
+        color:${COLORS.darkGray};
     }
 
     a{
@@ -17,7 +17,6 @@ const GlobalStyles = createGlobalStyle`
         text-decoration:none;
         cursor: pointer;
     }
-
 `;
 
 export default GlobalStyles;
