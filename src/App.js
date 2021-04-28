@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     setWindowWidth(window.innerWidth);
-    setIsNavBarOpen(true);
+    windowWidth >= 768 && setIsNavBarOpen(true);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -31,13 +31,10 @@ function App() {
       />
       <Router />
 
-      {isNavBarOpen === false && (
-        <>
-          <Learning />
-          <Project />
-          <Contact />
-        </>
-      )}
+      {/* TODO: 모바일에서 navBar 펼쳐졌을 때 뒤에 스크롤 되는 거 개선하기  */}
+      <Learning />
+      <Project />
+      <Contact />
     </>
   );
 
