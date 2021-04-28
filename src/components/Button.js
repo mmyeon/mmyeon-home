@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
+import { device } from "../device";
 
 const ButtonContainer = styled.button`
   background: ${COLORS.orange};
@@ -14,6 +15,13 @@ const ButtonContainer = styled.button`
   font-weight: ${FONT_WEIGHT.extraBold};
   cursor: pointer;
   letter-spacing: 2px;
+
+  @media ${device.tablet} {
+    font-size: 1.2em;
+    left: 8em;
+    position: relative;
+    margin-top: 1em;
+  }
 `;
 
 const Button = ({ title }) => {
