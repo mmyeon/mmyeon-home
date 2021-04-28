@@ -153,7 +153,19 @@ const Container = styled.div`
       position: absolute;
       bottom: 1em;
       left: 50%;
-      transform: translate(-50%, 0);
+      animation: move 2s infinite;
+
+      @keyframes move {
+        0% {
+          transform: translate(-50%, -4em);
+        }
+        50% {
+          transform: translate(-50%, -2em);
+        }
+        100% {
+          transform: translate(-50%, -4em);
+        }
+      }
     }
   }
 `;
