@@ -52,11 +52,12 @@ const NavBarContainer = styled.div`
       border-bottom: 6px solid ${COLORS.lightSkyBlue};
       cursor: pointer;
       text-transform: uppercase;
-      transition: letter-spacing 0.5s;
+      transition: letter-spacing 0.8s;
 
       @media ${device.desktop} {
         &:hover {
-          letter-spacing: 0.6em;
+          letter-spacing: 0.3em;
+          border-bottom: 6px solid ${COLORS.orange};
         }
       }
     }
