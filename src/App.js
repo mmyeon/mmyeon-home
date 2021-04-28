@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import Router from "./Router";
 import Learning from "./components/Learning";
@@ -8,6 +8,17 @@ import Gnb from "./components/Gnb";
 
 function App() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    setWindowWidth(window.innerWidth);
+    setIsNavBarOpen(true);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -16,6 +27,7 @@ function App() {
         openNavBar={openNavBar}
         closeNavBar={closeNavBar}
         isNavBarOpen={isNavBarOpen}
+        windowInnerWidth={windowWidth}
       />
       <Router />
 
@@ -35,6 +47,10 @@ function App() {
 
   function closeNavBar() {
     setIsNavBarOpen(false);
+  }
+
+  function handleResize() {
+    setWindowWidth(window.innerWidth);
   }
 }
 
