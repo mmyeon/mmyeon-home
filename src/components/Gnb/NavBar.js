@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../device";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 const NavBarContainer = styled.div`
@@ -12,10 +13,18 @@ const NavBarContainer = styled.div`
   border: 3px solid ${COLORS.darkGray};
   border-radius: 2em 2em 0 0;
 
+  @media ${device.tablet} {
+    height: 4em;
+  }
+
   > .button-container {
     border-bottom: 2px solid ${COLORS.darkGray};
     width: 100vw;
     height: 2.5em;
+
+    @media ${device.tablet} {
+      display: none;
+    }
 
     > button {
       cursor: pointer;
@@ -29,6 +38,13 @@ const NavBarContainer = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media ${device.tablet} {
+      flex-direction: row;
+      height: 100%;
+      justify-content: space-around;
+      font-size: 0.5rem;
+    }
+
     > li {
       font-size: 3em;
       font-weight: ${FONT_WEIGHT.semiBold};
@@ -36,6 +52,13 @@ const NavBarContainer = styled.div`
       border-bottom: 6px solid ${COLORS.lightSkyBlue};
       cursor: pointer;
       text-transform: uppercase;
+      transition: letter-spacing 0.5s;
+
+      @media ${device.desktop} {
+        &:hover {
+          letter-spacing: 0.6em;
+        }
+      }
     }
   }
 `;
