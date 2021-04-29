@@ -5,6 +5,10 @@ import { COLORS } from "./constant";
 const GlobalStyles = createGlobalStyle`
     ${reset};
 
+    * {
+        box-sizing:border-box;
+    }
+
     body { 
         width:100vw;
         height:100vh;
@@ -13,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a{
-        color:black;
+        color:inherit;
         text-decoration:none;
         cursor: pointer;
     }
