@@ -37,17 +37,49 @@ const LearningContainer = styled.div`
       }
     }
 
+    > .links {
+      max-width: 300px;
+      margin: 0 auto;
+      display: grid;
+      justify-items: center;
+      column-gap: 13px;
+      row-gap: 15px;
+      grid-template-columns: 100px 100px;
+      justify-content: center;
+
+      > .block:nth-child(3) {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+
     > .rocket-img {
       position: relative;
       width: 19em;
-      top: -1.2em;
-      left: -7em;
+      top: -11.5em;
+      left: -7.5em;
     }
   }
 `;
 
 const Learning = () => {
-  const linkList = ["블로그", "읽은 책 목록", "WILT"];
+  const linkList = [
+    {
+      title: "블로그",
+      url: "https://til.mmyeon.com/",
+      backgroundColor: `${COLORS.yellow}`,
+    },
+    {
+      title: "읽은 책 목록",
+      url: "https://til.mmyeon.com/",
+      backgroundColor: `${COLORS.lightGreen}`,
+    },
+    {
+      title: "WILT",
+      url: "https://til.mmyeon.com/",
+      backgroundColor: `${COLORS.orange}`,
+    },
+  ];
 
   return (
     <LearningContainer id="learning">
@@ -64,8 +96,14 @@ const Learning = () => {
           </span>
         </div>
         <div className="links">
-          {linkList.map((link) => (
-            <RoundedRectangle key={link} title={link} />
+          {linkList.map((item) => (
+            <RoundedRectangle
+              key={item.title}
+              title={item.title}
+              url={item.url}
+              backgroundColor={item.backgroundColor}
+              className="block"
+            />
           ))}
         </div>
         <img
