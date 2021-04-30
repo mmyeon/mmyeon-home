@@ -63,6 +63,22 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
+      animation: move-foward 1.8s ease;
+      animation-fill-mode: forwards;
+
+      @keyframes move-foward {
+        0% {
+          transform: rotate(10deg) translate(-80px, -20px);
+        }
+
+        50% {
+          transform: rotate(5deg) translate(20px, 5px);
+        }
+
+        100% {
+          transform: rotate(-10deg) translate(0, 10px);
+        }
+      }
     }
   }
 `;
