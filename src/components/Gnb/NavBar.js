@@ -8,7 +8,7 @@ const NavBarContainer = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
-  width: calc(100% - 6px);
+  width: 100%;
   z-index: 20;
   border: 3px solid ${COLORS.darkGray};
   border-radius: 2em 2em 0 0;
@@ -32,7 +32,7 @@ const NavBarContainer = styled.div`
   }
 
   > ul {
-    height: calc(100% - 40px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
