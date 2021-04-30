@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import RoundedRectangle from "./RoundedRectangle";
 import Title from "./Title";
@@ -9,6 +10,10 @@ const LearningContainer = styled.div`
   background: ${COLORS.pink};
   word-break: keep-all;
   text-align: center;
+
+  @media ${device.tablet} {
+    padding-top: 3.6em;
+  }
 
   > .content-container {
     height: 100vh;
