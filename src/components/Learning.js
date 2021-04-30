@@ -22,42 +22,45 @@ const LearningContainer = styled.div`
     overflow: hidden;
     position: relative;
 
-    > .avatar-talk {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5em 0;
+    .content {
+      position: relative;
 
-      > .avatar-img {
-        width: 4.5em;
+      > .avatar-talk {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5em 0;
+
+        > .avatar-img {
+          width: 4.5em;
+        }
+
+        > .avatar-desc {
+          font-size: 1.07em;
+          letter-spacing: 0.05em;
+          font-weight: ${FONT_WEIGHT.regular};
+          line-height: 1.3;
+          margin-top: 1em;
+        }
       }
 
-      > .avatar-desc {
-        font-size: 1.07em;
-        letter-spacing: 0.05em;
-        font-weight: ${FONT_WEIGHT.regular};
-        line-height: 1.3;
-        margin-top: 1em;
+      > .links {
+        max-width: 300px;
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
+        column-gap: 13px;
+        row-gap: 15px;
+        grid-template-columns: 100px 100px;
+        justify-content: center;
+
+        > .block:nth-child(3) {
+          grid-column: 2 / 2;
+          grid-row: 2 / 3;
+        }
       }
     }
-
-    > .links {
-      max-width: 300px;
-      margin: 0 auto;
-      display: grid;
-      justify-items: center;
-      column-gap: 13px;
-      row-gap: 15px;
-      grid-template-columns: 100px 100px;
-      justify-content: center;
-
-      > .block:nth-child(3) {
-        grid-column: 2 / 2;
-        grid-row: 2 / 3;
-      }
-    }
-
     > .rocket-img {
       position: relative;
       width: 19em;
@@ -105,27 +108,29 @@ const Learning = () => {
   return (
     <LearningContainer id="learning">
       <div className="content-container">
-        <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
-        <div className="avatar-talk">
-          <img
-            className="avatar-img"
-            src="/assets/images/avatar.png"
-            alt="avatar"
-          />
-          <span className="avatar-desc">
-            WILT(What I Learnt Today)를 기록하며 매일매일 성장하고 있습니다.
-          </span>
-        </div>
-        <div className="links">
-          {linkList.map((item) => (
-            <RoundedRectangle
-              key={item.title}
-              title={item.title}
-              url={item.url}
-              backgroundColor={item.backgroundColor}
-              className="block"
+        <div className="content">
+          <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
+          <div className="avatar-talk">
+            <img
+              className="avatar-img"
+              src="/assets/images/avatar.png"
+              alt="avatar"
             />
-          ))}
+            <span className="avatar-desc">
+              WILT(What I Learnt Today)를 기록하며 매일매일 성장하고 있습니다.
+            </span>
+          </div>
+          <div className="links">
+            {linkList.map((item) => (
+              <RoundedRectangle
+                key={item.title}
+                title={item.title}
+                url={item.url}
+                backgroundColor={item.backgroundColor}
+                className="block"
+              />
+            ))}
+          </div>
         </div>
         <img
           className="rocket-img"
