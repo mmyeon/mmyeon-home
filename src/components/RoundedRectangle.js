@@ -10,7 +10,7 @@ const Container = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 1em;
-  border: 3px solid ${COLORS.darkGray};
+  border: 2px solid ${COLORS.darkGray};
   z-index: 1;
   font-weight: ${FONT_WEIGHT.semiBold};
   font-size: 1.12em;
