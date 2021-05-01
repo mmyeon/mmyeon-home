@@ -11,8 +11,8 @@ const LearningContainer = styled.div`
   word-break: keep-all;
   text-align: center;
 
-  @media ${device.tablet} {
-    padding-top: 3.6em;
+  @media ${device.desktop} {
+    text-align: left;
   }
 
   > .content-container {
@@ -21,6 +21,20 @@ const LearningContainer = styled.div`
     padding: 3em 1em;
     overflow: hidden;
     position: relative;
+
+    @media ${device.tablet} {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+      padding: 0 2em;
+      padding-top: 3.6em;
+    }
+
+    @media ${device.desktop} {
+      max-width: 1000px;
+      padding-top: 0;
+    }
 
     .content {
       position: relative;
@@ -32,8 +46,13 @@ const LearningContainer = styled.div`
         justify-content: center;
         padding: 1.5em 0;
 
+        @media ${device.tablet} {
+          flex-direction: row;
+        }
+
         > .avatar-img {
           width: 4.5em;
+          margin-right: 1em;
         }
 
         > .avatar-desc {
@@ -42,6 +61,12 @@ const LearningContainer = styled.div`
           font-weight: ${FONT_WEIGHT.regular};
           line-height: 1.3;
           margin-top: 1em;
+
+          @media ${device.tablet} {
+            font-size: 1.3em;
+            margin-top: 0em;
+            text-align: left;
+          }
         }
       }
 
@@ -54,10 +79,16 @@ const LearningContainer = styled.div`
         row-gap: 15px;
         grid-template-columns: 100px 100px;
         justify-content: center;
+        text-align: center;
 
         > .block:nth-child(3) {
           grid-column: 2 / 2;
           grid-row: 2 / 3;
+
+          @media ${device.tablet} {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+          }
         }
       }
     }
@@ -81,6 +112,21 @@ const LearningContainer = styled.div`
         100% {
           transform: rotate(-10deg) translate(0, 10px);
         }
+      }
+
+      @media ${device.tablet} {
+        width: 25em;
+        top: 0;
+        left: 0;
+        grid-row: 1/2;
+        justify-self: center;
+      }
+
+      @media ${device.desktop} {
+        width: 36.3em;
+        top: 0;
+        left: 0;
+        justify-self: end;
       }
     }
   }
