@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { device } from "../device";
 import { FONT_WEIGHT } from "../styles/constant";
 
-const StyledTitle = styled.span`
+const StyledTitle = styled.h1`
   font-size: 1.87em;
   font-weight: ${FONT_WEIGHT.bold};
   line-height: 1.2;
