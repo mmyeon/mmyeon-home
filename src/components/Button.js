@@ -4,7 +4,8 @@ import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 
 const ButtonContainer = styled.button`
-  background: ${COLORS.orange};
+  /* background: ${COLORS.darkGray}; */
+  background: ${(props) => props.backgroundColor};
   padding: 0.6em 2em;
   border: none;
   font-size: 0.75em;
@@ -24,8 +25,10 @@ const ButtonContainer = styled.button`
   }
 `;
 
-const Button = ({ title }) => {
-  return <ButtonContainer>{title}</ButtonContainer>;
+const Button = ({ title, backgroundColor }) => {
+  return (
+    <ButtonContainer backgroundColor={backgroundColor}>{title}</ButtonContainer>
+  );
 };
 
 export default Button;
