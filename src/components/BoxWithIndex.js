@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import Button from "./Button";
 
@@ -10,7 +11,12 @@ const Container = styled.div`
   align-items: flex-start;
   justify-content: center;
   max-width: 100%;
+  margin: 0 auto;
   margin-top: 1.5em;
+
+  @media ${device.tablet} {
+    max-width: 24em;
+  }
 
   > .content {
     background: white;
@@ -20,7 +26,18 @@ const Container = styled.div`
     flex-direction: column;
     border: 2px solid ${COLORS.darkGray};
     border-top: 3px solid ${COLORS.darkGray};
+    max-width: 21em;
     width: 100%;
+
+    > .project-desc {
+      font-size: 1.07em;
+      line-height: 1.3;
+
+      @media ${device.tablet} {
+        font-size: 1.2em;
+        line-height: 1.2;
+      }
+    }
 
     > * + * {
       margin-top: 1em;
@@ -42,7 +59,7 @@ const Index = styled.span`
   background: ${COLORS.yellow};
   font-weight: ${FONT_WEIGHT.extraBold};
   font-size: 1.3em;
-  padding: 0.3em 0.5em;
+  padding: 0.5em 0.9em;
   border-radius: 0.6em 0.6em 0 0;
   border: 2px solid black;
   border-bottom: none;
@@ -54,7 +71,7 @@ const BoxWithIndex = ({ title, img, desc, link }) => {
       <Index>{title}</Index>
       <div className="content">
         <img className="project-thumbnail" src={img} alt="thumbnail" />
-        <span>{desc}</span>
+        <span className="project-desc">{desc}</span>
         <a href={link} target="_blank" rel="noreferrer">
           <Button title="더보기" backgroundColor={`${COLORS.darkGray}`} />
         </a>
