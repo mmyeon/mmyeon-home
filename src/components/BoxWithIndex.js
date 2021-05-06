@@ -26,7 +26,6 @@ const Container = styled.div`
     flex-direction: column;
     border: 2px solid ${COLORS.darkGray};
     border-top: 3px solid ${COLORS.darkGray};
-    max-width: 21em;
     width: 100%;
 
     > .project-desc {
