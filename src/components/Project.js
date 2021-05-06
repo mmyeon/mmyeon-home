@@ -15,7 +15,8 @@ const ProjectContainer = styled.div`
   > .content-container {
     display: flex;
     flex-direction: column;
-    padding: 3em 2em;
+    padding: 0 2em;
+    padding-bottom: 3em;
     position: relative;
 
     @media ${device.tablet} {
@@ -24,6 +25,7 @@ const ProjectContainer = styled.div`
       max-width: 100%;
       margin: 0 auto;
       height: auto;
+      padding-top: 3em;
     }
 
     > .title-container {
