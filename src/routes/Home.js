@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HireMeButton from "../components/HireMeButton";
+import EmailButton from "../components/EmailButton";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 
@@ -191,7 +191,7 @@ const Home = () => {
             <span className="highlight">지속적인 성장</span>을 추구하는 개발자
             <span className="bold"> 임미연</span>입니다.
           </p>
-          <HireMeButton />
+          <EmailButton title="hire me" />
         </div>
         <img
           className="blob"

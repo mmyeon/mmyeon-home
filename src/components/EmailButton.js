@@ -15,12 +15,12 @@ const StyledLink = styled.a`
   }
 `;
 
-const HireMeButton = () => {
+const EmailButton = ({ title }) => {
   return (
     <StyledLink href="mailto:mindfulyeon@gmail.com?subject=당신과 함께 일해보고 싶어요.">
-      <Button title="HIRE ME" backgroundColor={`${COLORS.orange}`} />
+      <Button title={title} backgroundColor={`${COLORS.orange}`} />
     </StyledLink>
   );
 };
 
-export default HireMeButton;
+export default EmailButton;
