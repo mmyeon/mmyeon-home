@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import EmailButton from "../components/EmailButton";
+import EmailButton from "../components/Buttons/MailToButton";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FONT_WEIGHT } from "../styles/constant";
+import { FONT_WEIGHT } from "../../styles/constant";
 
 const ButtonContainer = styled.button`
   background: ${(props) => props.backgroundColor};
@@ -14,6 +14,7 @@ const ButtonContainer = styled.button`
   font-weight: ${FONT_WEIGHT.extraBold};
   cursor: pointer;
   letter-spacing: 2px;
+  text-transform: uppercase;
 `;
 
 const Button = ({ title, backgroundColor }) => {
