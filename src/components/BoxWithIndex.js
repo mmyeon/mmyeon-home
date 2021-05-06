@@ -15,7 +15,7 @@ const Container = styled.div`
   margin-top: 1.5em;
 
   @media ${device.tablet} {
-    max-width: 24em;
+    max-width: 18em;
   }
 
   > .content {
