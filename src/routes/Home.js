@@ -107,6 +107,11 @@ const Container = styled.div`
             }
           }
         }
+
+        .bold {
+          font-weight: 700;
+          letter-spacing: 0.2em;
+        }
       }
     }
 
@@ -184,7 +189,7 @@ const Home = () => {
             <span className="highlight">요가</span>와{" "}
             <span className="highlight">개</span>를 사랑하고{" "}
             <span className="highlight">지속적인 성장</span>을 추구하는 개발자
-            <strong> 임미연</strong>입니다.
+            <span className="bold"> 임미연</span>입니다.
           </p>
           <HireMeButton />
         </div>
