@@ -12,24 +12,18 @@ const ProjectContainer = styled.div`
   height: auto;
   position: relative;
 
-  @media ${device.tablet} {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
   > .content-container {
     display: flex;
     flex-direction: column;
-    height: 150vh;
-    padding: 3em 1.5em;
+    padding: 3em 2em;
     position: relative;
 
     @media ${device.tablet} {
       flex-direction: row;
       justify-content: center;
-      width: 100%;
+      max-width: 100%;
       margin: 0 auto;
+      height: auto;
     }
 
     > .title-container {
@@ -37,18 +31,16 @@ const ProjectContainer = styled.div`
       align-items: flex-end;
       flex-direction: row;
       justify-content: center;
-      background: red;
       margin-top: 3em;
 
       @media ${device.tablet} {
-        height: auto;
-        flex-direction: column;
         align-items: center;
-        align-self: stretch;
-        position: fixed;
-        top: 30%;
-        left: 0;
-        margin-right: 1em;
+        flex-direction: column;
+        max-height: 100vh;
+        margin-top: 0;
+        position: sticky;
+        top: 3.62em;
+        bottom: 0;
       }
 
       > .dog-img {
@@ -56,15 +48,17 @@ const ProjectContainer = styled.div`
         max-width: 28.1em;
 
         @media ${device.tablet} {
-          margin: 3em 0;
+          margin-top: 1.5em;
         }
       }
     }
 
     > .project-desc {
       @media ${device.tablet} {
-        align-self: self-end;
-        transform: translateY(44%);
+        height: auto;
+        margin-top: 0;
+        padding-top: 10em;
+        padding-left: 2em;
       }
     }
   }
@@ -79,7 +73,7 @@ const Project = () => {
       link: "https://dogin.mmyeon.com/",
     },
     {
-      title: "DogIn2",
+      title: "YOGA",
       img: "/assets/images/project-dog.png",
       desc:
         "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
