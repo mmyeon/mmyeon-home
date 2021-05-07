@@ -1,6 +1,6 @@
 import React from "react";
-import { device } from "../device";
-import { COLORS } from "../styles/constant";
+import { device } from "../../device";
+import { COLORS } from "../../styles/constant";
 import Button from "./Button";
 import styled from "styled-components";
 
@@ -15,12 +15,12 @@ const StyledLink = styled.a`
   }
 `;
 
-const HireMeButton = () => {
+const EmailButton = ({ title }) => {
   return (
     <StyledLink href="mailto:mindfulyeon@gmail.com?subject=당신과 함께 일해보고 싶어요.">
-      <Button title="HIRE ME" backgroundColor={`${COLORS.orange}`} />
+      <Button title={title} backgroundColor={`${COLORS.orange}`} />
     </StyledLink>
   );
 };
 
-export default HireMeButton;
+export default EmailButton;
