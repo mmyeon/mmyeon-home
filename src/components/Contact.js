@@ -3,26 +3,52 @@ import styled from "styled-components";
 import { COLORS } from "../styles/constant";
 import Title from "./Title";
 import OutlineButton from "./Buttons/OutlineButton";
+import { device } from "../device";
 
 const ContactContainer = styled.div`
+  width: 100%;
   height: 100vh;
   background: ${COLORS.pastelBlue};
   box-sizing: border-box;
   padding: 0 2em;
   padding-top: 2em;
 
+  @media ${device.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   > .content {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
 
-    > .btn-containter {
+    @media ${device.tablet} {
+      margin: 0;
     }
 
-    > img.jumping {
-      width: 14em;
-      display: block;
-      margin: 0 auto;
-      margin-top: 0.4em;
+    > .btn-container {
+      width: 100%;
+      margin-top: 0.5em;
+
+      @media ${device.tablet} {
+        max-width: 80%;
+        display: block;
+        margin: 1em auto;
+      }
+    }
+  }
+
+  > img.jumping {
+    width: 14em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.4em;
+
+    @media ${device.tablet} {
+      width: 20em;
+      margin: 0;
+      margin-left: 4em;
     }
   }
 `;
@@ -53,13 +79,12 @@ const Contact = () => {
             </li>
           ))}
         </ul>
-
-        <img
-          src="/assets/images/contact-jump.png"
-          alt="jumping person"
-          className="jumping"
-        />
       </div>
+      <img
+        src="/assets/images/contact-jump.png"
+        alt="jumping person"
+        className="jumping"
+      />
     </ContactContainer>
   );
 };
