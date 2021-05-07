@@ -9,7 +9,7 @@ const ButtonContainer = styled.button`
   font-size: 0.75em;
   color: white;
   border-radius: 0.6em;
-  margin-top: 0.5em;
+  margin-top: 0.4em;
   font-family: "Poppins", sans-serif;
   font-weight: ${FONT_WEIGHT.extraBold};
   cursor: pointer;
