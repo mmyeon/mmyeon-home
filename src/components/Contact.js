@@ -8,7 +8,14 @@ import { device } from "../device";
 const ContactContainer = styled.div`
   width: 100%;
   height: 100vh;
-  background: ${COLORS.pastelBlue};
+  background: repeating-linear-gradient(
+    to right,
+    ${COLORS.pastelBlue},
+    ${COLORS.pastelBlue} 20px,
+    rgba(25, 71, 229, 0.46) 20px,
+    rgba(25, 71, 229, 0.46) 40px
+  );
+
   box-sizing: border-box;
   padding: 0 2em;
   padding-top: 2em;
@@ -17,6 +24,14 @@ const ContactContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 3em;
+    background: repeating-linear-gradient(
+      to right,
+      ${COLORS.pastelBlue},
+      ${COLORS.pastelBlue} 6em,
+      rgba(25, 71, 229, 0.46) 6em,
+      rgba(25, 71, 229, 0.46) 7em
+    );
   }
 
   > .content {
