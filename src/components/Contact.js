@@ -5,21 +5,24 @@ import Title from "./Title";
 import OutlineButton from "./Buttons/OutlineButton";
 
 const ContactContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   background: ${COLORS.pastelBlue};
-  padding: 3em 2em;
+  box-sizing: border-box;
+  padding: 0 2em;
+  padding-top: 2em;
 
   > .content {
     width: 100%;
     margin: 0 auto;
 
     > .btn-containter {
-      /* TODO:width 확인 */
-      width: 90%;
     }
 
     > img.jumping {
-      width: 16em;
+      width: 14em;
+      display: block;
+      margin: 0 auto;
+      margin-top: 0.4em;
     }
   }
 `;
