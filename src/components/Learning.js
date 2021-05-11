@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
@@ -97,9 +97,14 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
-      animation: move-foward 1.8s ease;
-      animation-fill-mode: forwards;
 
+      /* TODO:클래스명 변경하기 */
+      &.isVisible {
+        animation-fill-mode: forwards;
+        animation: move-foward 1.8s ease;
+      }
+
+      // TODO: 애니메이션 변경하기
       @keyframes move-foward {
         0% {
           transform: rotate(10deg) translate(-80px, -20px);
@@ -133,6 +138,9 @@ const LearningContainer = styled.div`
 `;
 
 const Learning = () => {
+  // TODO: 스테이트이름 변경하기
+  const [isVisible, setIsVisible] = useState(false);
+
   const linkList = [
     {
       title: "블로그",
@@ -151,8 +159,45 @@ const Learning = () => {
     },
   ];
 
+  const containerRef = useRef(null);
+  let className = isVisible ? "rocket-img isVisible" : "rocket-img";
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      setIsVisible(entry.isIntersecting);
+    }
+    const timerId = setTimeout(() => {
+      setIsVisible(false);
+    }, 3000);
+
+    if (isVisible) {
+      clearTimeout(timerId);
+    }
+  };
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.9,
+    };
+
+    const targetElem = containerRef.current;
+    const observer = new IntersectionObserver(callbackFunction, options);
+    if (targetElem) {
+      observer.observe(targetElem);
+    }
+
+    return () => {
+      if (targetElem) {
+        observer.unobserve(targetElem);
+      }
+    };
+  }, [containerRef]);
+
   return (
-    <LearningContainer id="learning">
+    <LearningContainer id="learning" ref={containerRef}>
       <div className="content-container">
         <div className="content">
           <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
@@ -179,7 +224,7 @@ const Learning = () => {
           </div>
         </div>
         <img
-          className="rocket-img"
+          className={className}
           src="/assets/images/learning-rocket.png"
           alt="rocket"
         />
