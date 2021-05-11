@@ -89,12 +89,8 @@ const Contact = () => {
 
         <ul className="btn-container">
           {contactList.map((contact) => (
-            <li>
-              <OutlineButton
-                key={contact.title}
-                title={contact.title}
-                link={contact.link}
-              />
+            <li key={contact.title}>
+              <OutlineButton title={contact.title} link={contact.link} />
             </li>
           ))}
         </ul>
