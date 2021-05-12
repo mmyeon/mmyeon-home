@@ -1,6 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
+import { useTargetOnScreen } from "../hooks/useTargetOnScreen";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import RoundedRectangle from "./RoundedRectangle";
 import Title from "./Title";
@@ -138,8 +139,11 @@ const LearningContainer = styled.div`
 `;
 
 const Learning = () => {
-  // TODO: 스테이트이름 변경하기
-  const [isVisible, setIsVisible] = useState(false);
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
 
   const linkList = [
     {
@@ -159,42 +163,7 @@ const Learning = () => {
     },
   ];
 
-  const containerRef = useRef(null);
   let className = isVisible ? "rocket-img isVisible" : "rocket-img";
-
-  const callbackFunction = (entries) => {
-    const [entry] = entries;
-    if (entry.isIntersecting) {
-      setIsVisible(entry.isIntersecting);
-    }
-    const timerId = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
-
-    if (isVisible) {
-      clearTimeout(timerId);
-    }
-  };
-
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.9,
-    };
-
-    const targetElem = containerRef.current;
-    const observer = new IntersectionObserver(callbackFunction, options);
-    if (targetElem) {
-      observer.observe(targetElem);
-    }
-
-    return () => {
-      if (targetElem) {
-        observer.unobserve(targetElem);
-      }
-    };
-  }, [containerRef]);
 
   return (
     <LearningContainer id="learning" ref={containerRef}>
