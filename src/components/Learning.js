@@ -99,13 +99,11 @@ const LearningContainer = styled.div`
       top: -11.5em;
       left: -7.5em;
 
-      /* TODO:클래스명 변경하기 */
-      &.isVisible {
+      &.visible {
         animation-fill-mode: forwards;
         animation: move-foward 1.8s ease;
       }
 
-      // TODO: 애니메이션 변경하기
       @keyframes move-foward {
         0% {
           transform: rotate(10deg) translate(-80px, -20px);
@@ -163,7 +161,7 @@ const Learning = () => {
     },
   ];
 
-  let className = isVisible ? "rocket-img isVisible" : "rocket-img";
+  let className = isVisible ? "rocket-img visible" : "rocket-img";
 
   return (
     <LearningContainer id="learning" ref={containerRef}>
