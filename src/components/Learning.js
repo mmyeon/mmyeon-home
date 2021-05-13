@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
+import { useTargetOnScreen } from "../hooks/useTargetOnScreen";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import RoundedRectangle from "./RoundedRectangle";
 import Title from "./Title";
@@ -97,8 +98,11 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
-      animation: move-foward 1.8s ease;
-      animation-fill-mode: forwards;
+
+      &.visible {
+        animation-fill-mode: forwards;
+        animation: move-foward 1.8s ease;
+      }
 
       @keyframes move-foward {
         0% {
@@ -133,6 +137,12 @@ const LearningContainer = styled.div`
 `;
 
 const Learning = () => {
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
+
   const linkList = [
     {
       title: "블로그",
@@ -151,8 +161,10 @@ const Learning = () => {
     },
   ];
 
+  let className = isVisible ? "rocket-img visible" : "rocket-img";
+
   return (
-    <LearningContainer id="learning">
+    <LearningContainer id="learning" ref={containerRef}>
       <div className="content-container">
         <div className="content">
           <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
@@ -179,7 +191,7 @@ const Learning = () => {
           </div>
         </div>
         <img
-          className="rocket-img"
+          className={className}
           src="/assets/images/learning-rocket.png"
           alt="rocket"
         />
