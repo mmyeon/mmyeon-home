@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { COLORS } from "../styles/constant";
-import BoxWithIndex from "./BoxWithIndex";
-import Title from "./Title";
+import BoxWithIndex from "../components/BoxWithIndex";
+import Title from "../components/Title";
 
 const ProjectContainer = styled.div`
   background: ${COLORS.lightBlue};
@@ -77,8 +77,7 @@ const Project = () => {
     {
       title: "YOGA",
       img: "/assets/images/project-dog.png",
-      desc:
-        "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
+      desc: "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
       link: "https://dogin.mmyeon.com/",
     },
   ];
