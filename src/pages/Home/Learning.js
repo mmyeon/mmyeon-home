@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../device";
-import { useTargetOnScreen } from "../hooks/useTargetOnScreen";
-import { COLORS, FONT_WEIGHT } from "../styles/constant";
-import RoundedRectangle from "./RoundedRectangle";
-import Title from "./Title";
+import { device } from "../../device";
+import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
+import { COLORS, FONT_WEIGHT } from "../../styles/constant";
+import RoundedRectangle from "../../components/RoundedRectangle";
+import Title from "../../components/Title";
 
 const LearningContainer = styled.div`
   min-height: 100vh;

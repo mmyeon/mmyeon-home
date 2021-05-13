@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../device";
-import { COLORS } from "../styles/constant";
-import BoxWithIndex from "../components/BoxWithIndex";
-import Title from "../components/Title";
+import { device } from "../../device";
+import { COLORS } from "../../styles/constant";
+import BoxWithIndex from "../../components/BoxWithIndex";
+import Title from "../../components/Title";
 
 const ProjectContainer = styled.div`
   background: ${COLORS.lightBlue};

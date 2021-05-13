@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../styles/constant";
-import Title from "./Title";
-import OutlineButton from "./Buttons/OutlineButton";
-import { device } from "../device";
+import { COLORS } from "../../styles/constant";
+import Title from "../../components/Title";
+import OutlineButton from "../../components/Buttons/OutlineButton";
+import { device } from "../../device";
 
 const ContactContainer = styled.div`
   width: 100%;
