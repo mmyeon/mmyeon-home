@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import Router from "./Router";
-import Learning from "./pages/Home/Learning";
-import Project from "./pages/Home/Project";
-import Contact from "./pages/Home/Contact";
 import Gnb from "./components/Gnb";
 
 function App() {
@@ -30,11 +27,6 @@ function App() {
         windowInnerWidth={windowWidth}
       />
       <Router />
-
-      {/* TODO: 모바일에서 navBar 펼쳐졌을 때 뒤에 스크롤 되는 거 개선하기  */}
-      <Learning />
-      <Project />
-      <Contact />
     </>
   );
 
