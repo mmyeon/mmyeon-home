@@ -1,7 +1,29 @@
 import React from "react";
+import styled from "styled-components";
+import { FONT_WEIGHT } from "../styles/constant";
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: ${FONT_WEIGHT.extraBold};
+  text-align: center;
+  line-height: 1.3;
+`;
 
 const PageNotFound = () => {
-  return <div>Page is not found.</div>;
+  return (
+    <Container>
+      <p>
+        😥
+        <br />
+        Page is not found.
+      </p>
+    </Container>
+  );
 };
 
 export default PageNotFound;
