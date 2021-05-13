@@ -4,6 +4,7 @@ import About from "./About";
 import Learning from "./Learning";
 import Project from "./Project";
 import Contact from "./Contact";
+import Gnb from "../../components/Gnb";
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -12,12 +13,15 @@ const HomeContainer = styled.div`
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <About />
-      <Learning />
-      <Project />
-      <Contact />
-    </HomeContainer>
+    <>
+      <Gnb />
+      <HomeContainer>
+        <About />
+        <Learning />
+        <Project />
+        <Contact />
+      </HomeContainer>
+    </>
   );
 };
 
