@@ -11,7 +11,7 @@ const NavBarContainer = styled.div`
   width: 100%;
   z-index: 20;
   border: 3px solid ${COLORS.darkGray};
-  border-radius: 2em 2em 0 0;
+  border-radius: 0 0 0.5em 0.5em;
 
   @media ${device.tablet} {
     height: 4em;
