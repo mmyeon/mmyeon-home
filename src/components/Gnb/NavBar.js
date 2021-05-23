@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { device } from "../../device";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.nav`
   background: white;
   position: fixed;
   top: 0;
@@ -17,7 +17,7 @@ const NavBarContainer = styled.div`
     height: 4em;
   }
 
-  > .button-container {
+  > .menu-toggle-container {
     border-bottom: 2px solid ${COLORS.darkGray};
     width: 100vw;
     height: 2.5em;
@@ -69,10 +69,11 @@ const NavBar = ({ closeNavBar }) => {
 
   return (
     <NavBarContainer>
-      <div className="button-container">
+      <div className="menu-toggle-container">
         <button onClick={closeNavBar}>X</button>
       </div>
-      <ul>
+
+      <ul className="menu-dropdown">
         {navBarList.map((item) => (
           <li key={item}>
             <a href={`#${item}`} onClick={closeNavBar}>
