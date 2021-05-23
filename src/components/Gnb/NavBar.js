@@ -64,19 +64,19 @@ const NavBarContainer = styled.nav`
   }
 `;
 
-const NavBar = ({ closeNavBar }) => {
+const NavBar = ({ toggleNavBar }) => {
   const navBarList = ["home", "learning", "project", "contact"];
 
   return (
     <NavBarContainer>
       <div className="menu-toggle-container">
-        <button onClick={closeNavBar}>X</button>
+        <button onClick={toggleNavBar}>X</button>
       </div>
 
       <ul className="menu-dropdown">
         {navBarList.map((item) => (
           <li key={item}>
-            <a href={`#${item}`} onClick={closeNavBar}>
+            <a href={`#${item}`} onClick={toggleNavBar}>
               {item}
             </a>
           </li>

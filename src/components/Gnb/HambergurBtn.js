@@ -13,10 +13,10 @@ const HambergurBtnContainer = styled.div`
   }
 `;
 
-const HambergurBtn = ({ openNavBar }) => {
+const HambergurBtn = ({ toggleNavBar }) => {
   return (
     <HambergurBtnContainer>
-      <button onClick={openNavBar}>내비게이션아 열려라</button>
+      <button onClick={toggleNavBar}>내비게이션아 열려라</button>
     </HambergurBtnContainer>
   );
 };

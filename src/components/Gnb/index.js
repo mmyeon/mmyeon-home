@@ -22,19 +22,15 @@ const Gnb = () => {
         <NavBar />
       ) : (
         <>
-          {!isNavBarOpen && <HambergurBtn openNavBar={openNavBar} />}
-          {isNavBarOpen && <NavBar closeNavBar={closeNavBar} />}
+          {!isNavBarOpen && <HambergurBtn toggleNavBar={toggleNavBar} />}
+          {isNavBarOpen && <NavBar toggleNavBar={toggleNavBar} />}
         </>
       )}
     </div>
   );
 
-  function openNavBar() {
-    setIsNavBarOpen(true);
-  }
-
-  function closeNavBar() {
-    setIsNavBarOpen(false);
+  function toggleNavBar() {
+    setIsNavBarOpen(!isNavBarOpen);
   }
 
   function handleResize() {
