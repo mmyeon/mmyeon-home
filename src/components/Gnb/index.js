@@ -22,7 +22,10 @@ const Gnb = () => {
         <NavBar />
       ) : (
         <>
-          {!isNavBarOpen && <HambergurBtn toggleNavBar={toggleNavBar} />}
+          <HambergurBtn
+            toggleNavBar={toggleNavBar}
+            isNavBarOpen={isNavBarOpen}
+          />
           {isNavBarOpen && <NavBar toggleNavBar={toggleNavBar} />}
         </>
       )}

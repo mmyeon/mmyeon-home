@@ -6,33 +6,21 @@ import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 const NavBarContainer = styled.nav`
   background: white;
   position: fixed;
-  top: 0;
+  top: 3.5em;
   bottom: 0;
   width: 100%;
+  height: 100%;
   z-index: 20;
   border: 3px solid ${COLORS.darkGray};
   border-radius: 0 0 0.5em 0.5em;
 
   @media ${device.tablet} {
     height: 4em;
-  }
-
-  > .menu-toggle-container {
-    border-bottom: 2px solid ${COLORS.darkGray};
-    width: 100vw;
-    height: 2.5em;
-
-    @media ${device.tablet} {
-      display: none;
-    }
-
-    > button {
-      cursor: pointer;
-    }
+    top: 0;
   }
 
   > ul {
-    height: 100vh;
+    height: calc(100% - 56px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,10 +57,6 @@ const NavBar = ({ toggleNavBar }) => {
 
   return (
     <NavBarContainer>
-      <div className="menu-toggle-container">
-        <button onClick={toggleNavBar}>X</button>
-      </div>
-
       <ul className="menu-dropdown">
         {navBarList.map((item) => (
           <li key={item}>
