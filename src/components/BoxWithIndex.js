@@ -46,6 +46,7 @@ const Container = styled.div`
       width: 100%;
       font-size: 1em;
       transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: letter-spacing 0.3s;
 
       &:hover {
         letter-spacing: 6px;

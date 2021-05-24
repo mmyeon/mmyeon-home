@@ -45,9 +45,14 @@ const ProjectContainer = styled.div`
         bottom: 0;
       }
 
+      > h1 {
+        animation: reveal 1s backwards 0.25s;
+      }
+
       > .dog-img {
         width: 45%;
         max-width: 28.1em;
+        animation: reveal 1s backwards 0.5s;
 
         @media ${device.tablet} {
           margin-top: 1.5em;
@@ -56,12 +61,24 @@ const ProjectContainer = styled.div`
     }
 
     > .project-desc {
+      animation: reveal 1s backwards 0.75s;
+
       @media ${device.tablet} {
         height: auto;
         margin-top: 0;
         padding-top: 10em;
         padding-left: 2em;
       }
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
     }
   }
 `;
@@ -94,10 +111,7 @@ const Project = () => {
               </>
             }
           />
-          {/* <Title
-            text={`요가와 개를 좋아하는 
-            개발자는 이런 걸 만듭니다.`}
-          /> */}
+
           <img
             className="dog-img"
             src="/assets/images/project-dog.png"
