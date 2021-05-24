@@ -40,11 +40,14 @@ const NavBarContainer = styled.nav`
       border-bottom: 6px solid ${COLORS.lightSkyBlue};
       cursor: pointer;
       text-transform: uppercase;
-      transition: letter-spacing 0.8s;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
 
       @media ${device.desktop} {
+        border: none;
+
         &:hover {
-          letter-spacing: 0.3em;
+          letter-spacing: 0.2em;
           border-bottom: 6px solid ${COLORS.orange};
         }
       }
