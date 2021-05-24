@@ -17,6 +17,12 @@ const Container = styled.a`
   padding: 0 0.5em;
   line-height: 1.2;
   letter-spacing: 0.7px;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 const RoundedRectangle = ({ title, className, url, backgroundColor }) => {
