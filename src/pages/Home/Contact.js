@@ -42,6 +42,10 @@ const ContactContainer = styled.div`
       margin: 0;
     }
 
+    > h1 {
+      animation: reveal 1s backwards 0.25s;
+    }
+
     > .btn-container {
       width: 100%;
       margin-top: 0.5em;
@@ -51,6 +55,16 @@ const ContactContainer = styled.div`
         display: block;
         margin: 1em auto;
       }
+
+      > li:nth-child(1) {
+        animation: reveal 1s backwards 0.5s;
+      }
+      > li:nth-child(2) {
+        animation: reveal 1s backwards 0.75s;
+      }
+      > li:nth-child(3) {
+        animation: reveal 1s backwards 1s;
+      }
     }
   }
 
@@ -59,11 +73,46 @@ const ContactContainer = styled.div`
     display: block;
     margin: 0 auto;
     margin-top: 0.4em;
+    animation: shake 1s linear 1.25s;
+    transition: 0.3s;
 
     @media ${device.tablet} {
       width: 20em;
       margin: 0;
       margin-left: 4em;
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateY(-0.4em);
+    }
+    20%,
+    40%,
+    60% {
+      transform: translateY(0.4em);
+    }
+    80% {
+      transform: translateY(0.3em);
+    }
+    90% {
+      transform: translateY(-0.3em);
     }
   }
 `;
