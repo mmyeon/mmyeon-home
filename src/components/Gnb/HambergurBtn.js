@@ -31,7 +31,7 @@ const HambergurBtnContainer = styled.div`
     position: fixed;
     top: 4.5%;
     right: 3%;
-    width: 2.5em;
+    width: 2.4em;
     height: 0.4em;
     background: ${COLORS.darkGray};
     transition: 0.5s;
@@ -56,7 +56,6 @@ const HambergurBtnContainer = styled.div`
 
     &::before {
       top: -14px;
-      width: 50%;
       width: 70%;
 
       ${(props) =>
