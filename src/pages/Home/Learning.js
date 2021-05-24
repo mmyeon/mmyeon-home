@@ -37,8 +37,22 @@ const LearningContainer = styled.div`
       padding-top: 0;
     }
 
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     .content {
       position: relative;
+
+      > h1 {
+        animation: reveal 1s backwards 0.5s;
+      }
 
       > .avatar-talk {
         display: flex;
@@ -46,6 +60,7 @@ const LearningContainer = styled.div`
         align-items: center;
         justify-content: center;
         padding: 1.5em 0;
+        animation: reveal 1s backwards 0.75s;
 
         @media ${device.tablet} {
           flex-direction: row;
@@ -82,9 +97,18 @@ const LearningContainer = styled.div`
         justify-content: center;
         text-align: center;
 
+        > .block:nth-child(1) {
+          animation: reveal 1s backwards 1s;
+        }
+
+        > .block:nth-child(2) {
+          animation: reveal 1s backwards 1.25s;
+        }
+
         > .block:nth-child(3) {
           grid-column: 2 / 2;
           grid-row: 2 / 3;
+          animation: reveal 1s backwards 1.5s;
 
           @media ${device.tablet} {
             grid-column: 3 / 4;
@@ -98,23 +122,21 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
+      transform: rotate(10deg) translate(50px, 10px);
 
       &.visible {
-        animation-fill-mode: forwards;
-        animation: move-foward 1.8s ease;
+        animation: move-foward 1s forwards 0.25s;
       }
 
       @keyframes move-foward {
         0% {
-          transform: rotate(10deg) translate(-80px, -20px);
-        }
-
-        50% {
-          transform: rotate(5deg) translate(20px, 5px);
+          opacity: 0;
+          transform: rotate(20deg) translate(-100px, -20px);
         }
 
         100% {
-          transform: rotate(-10deg) translate(0, 10px);
+          opacity: 1;
+          transform: rotate(10deg) translate(50px, 10px);
         }
       }
 
