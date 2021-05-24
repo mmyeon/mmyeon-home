@@ -43,6 +43,17 @@ const AboutContainer = styled.div`
         font-size: 1em;
         line-height: 1.4;
         margin-bottom: 2em;
+        animation: reveal 1s backwards 0.25s;
+
+        @keyframes reveal {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+          }
+        }
 
         > .name {
           font-size: 2.06em;
@@ -81,6 +92,7 @@ const AboutContainer = styled.div`
         font-weight: ${FONT_WEIGHT.regular};
         word-break: keep-all;
         letter-spacing: 0.8px;
+        animation: reveal 1s backwards 0.5s;
 
         @media ${device.tablet} {
           font-size: 1.5em;
@@ -113,6 +125,11 @@ const AboutContainer = styled.div`
           letter-spacing: 0.2em;
         }
       }
+
+      > a {
+        animation: reveal 1s backwards 0.75s;
+        display: inline-block;
+      }
     }
 
     > .blob {
@@ -139,7 +156,8 @@ const AboutContainer = styled.div`
       width: 16em;
       padding: 2em 0;
       right: 9.5em;
-      transform: translate(0, 6%);
+      opacity: 0;
+      animation: moving 1s forwards 1s;
 
       @media ${device.tablet} {
         width: 30em;
@@ -149,6 +167,18 @@ const AboutContainer = styled.div`
       @media ${device.desktop} {
         width: 42em;
         right: 10em;
+      }
+
+      @keyframes moving {
+        0% {
+          opacity: 0;
+          transform: translate(500px, 6%);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translate(0, 6%);
+        }
       }
     }
 
