@@ -5,8 +5,10 @@ import { COLORS } from "../../styles/constant";
 
 const HambergurBtnContainer = styled.div`
   position: fixed;
+  width: 3.7em;
+  height: 3.7em;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 30;
 
   ${(props) =>
@@ -17,17 +19,51 @@ const HambergurBtnContainer = styled.div`
       width: 100vw;
       height: 3.5em;
       background: ${COLORS.white};
+      top: 0;
+      right: 0;
     `}
 
   @media ${device.tablet} {
     display: none;
+  }
+
+  > .menu-btn-burger {
+    position: fixed;
+    top: 4.5%;
+    right: 3%;
+    width: 2.5em;
+    height: 0.4em;
+    background: ${COLORS.darkGray};
+    transition: 0.5s;
+    border-radius: 5px;
+
+    &::before,
+    ::after {
+      content: "";
+      position: absolute;
+      width: 2.5em;
+      height: 0.4em;
+      background: ${COLORS.darkGray};
+      border-radius: 5px;
+      transition: 0.5s;
+    }
+
+    &::before {
+      top: -14px;
+      width: 50%;
+    }
+
+    &::after {
+      top: 14px;
+      width: 70%;
+    }
   }
 `;
 
 const HambergurBtn = ({ toggleNavBar, isNavBarOpen }) => {
   return (
     <HambergurBtnContainer isNavBarOpen={isNavBarOpen}>
-      <button onClick={toggleNavBar}>내비게이션아 열려라</button>
+      <div className="menu-btn-burger" onClick={toggleNavBar}></div>
     </HambergurBtnContainer>
   );
 };
