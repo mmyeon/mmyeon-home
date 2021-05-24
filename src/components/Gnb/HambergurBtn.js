@@ -37,6 +37,12 @@ const HambergurBtnContainer = styled.div`
     transition: 0.5s;
     border-radius: 5px;
 
+    ${(props) =>
+      props.isNavBarOpen &&
+      css`
+        background: transparent;
+      `}
+
     &::before,
     ::after {
       content: "";
@@ -51,11 +57,28 @@ const HambergurBtnContainer = styled.div`
     &::before {
       top: -14px;
       width: 50%;
+      width: 70%;
+
+      ${(props) =>
+        props.isNavBarOpen &&
+        css`
+          width: 100%;
+          top: 0;
+          transform: rotate(45deg);
+        `}
     }
 
     &::after {
       top: 14px;
       width: 70%;
+
+      ${(props) =>
+        props.isNavBarOpen &&
+        css`
+          width: 100%;
+          top: 0;
+          transform: rotate(135deg);
+        `}
     }
   }
 `;
