@@ -34,7 +34,7 @@ const NavBarContainer = styled.nav`
     }
 
     > li {
-      font-size: 3em;
+      font-size: 2.3em;
       font-weight: ${FONT_WEIGHT.semiBold};
       margin: 0.5em 0;
       border-bottom: 6px solid ${COLORS.lightSkyBlue};
