@@ -46,13 +46,15 @@ const ProjectContainer = styled.div`
       }
 
       > h1 {
-        animation: reveal 1s backwards 0.25s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.25s;
       }
 
       > .dog-img {
         width: 45%;
         max-width: 28.1em;
-        animation: reveal 1s backwards 0.5s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.5s;
 
         @media ${device.tablet} {
           margin-top: 1.5em;
@@ -61,7 +63,8 @@ const ProjectContainer = styled.div`
     }
 
     > .project-desc {
-      animation: reveal 1s backwards 0.75s;
+      opacity: 0;
+      animation: reveal 1s forwards 0.75s;
 
       @media ${device.tablet} {
         height: auto;
@@ -74,7 +77,6 @@ const ProjectContainer = styled.div`
 
   @keyframes reveal {
     0% {
-      opacity: 0;
       transform: translateY(20px);
     }
     100% {

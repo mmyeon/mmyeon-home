@@ -43,7 +43,8 @@ const ContactContainer = styled.div`
     }
 
     > h1 {
-      animation: reveal 1s backwards 0.25s;
+      opacity: 0;
+      animation: reveal 1s forwards 0.25s;
     }
 
     > .btn-container {
@@ -57,13 +58,16 @@ const ContactContainer = styled.div`
       }
 
       > li:nth-child(1) {
-        animation: reveal 1s backwards 0.5s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.5s;
       }
       > li:nth-child(2) {
-        animation: reveal 1s backwards 0.75s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.75s;
       }
       > li:nth-child(3) {
-        animation: reveal 1s backwards 1s;
+        opacity: 0;
+        animation: reveal 1s forwards 1s;
       }
     }
   }
@@ -73,8 +77,9 @@ const ContactContainer = styled.div`
     display: block;
     margin: 0 auto;
     margin-top: 0.4em;
-    animation: shake 1s linear 1.25s;
+    animation: shake 1s linear 1.25s forwards;
     transition: 0.3s;
+    opacity: 0;
 
     @media ${device.tablet} {
       width: 20em;
@@ -95,6 +100,7 @@ const ContactContainer = styled.div`
   @keyframes shake {
     0%,
     100% {
+      opacity: 1;
       transform: translateY(0);
     }
     10%,

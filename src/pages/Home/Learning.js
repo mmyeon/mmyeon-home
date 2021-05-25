@@ -39,7 +39,6 @@ const LearningContainer = styled.div`
 
     @keyframes reveal {
       0% {
-        opacity: 0;
         transform: translateY(20px);
       }
       100% {
@@ -51,7 +50,8 @@ const LearningContainer = styled.div`
       position: relative;
 
       > h1 {
-        animation: reveal 1s backwards 0.5s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.5s;
       }
 
       > .avatar-talk {
@@ -60,7 +60,8 @@ const LearningContainer = styled.div`
         align-items: center;
         justify-content: center;
         padding: 1.5em 0;
-        animation: reveal 1s backwards 0.75s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.75s;
 
         @media ${device.tablet} {
           flex-direction: row;
@@ -98,17 +99,20 @@ const LearningContainer = styled.div`
         text-align: center;
 
         > .block:nth-child(1) {
-          animation: reveal 1s backwards 1s;
+          opacity: 0;
+          animation: reveal 1s forwards 1s;
         }
 
         > .block:nth-child(2) {
-          animation: reveal 1s backwards 1.25s;
+          opacity: 0;
+          animation: reveal 1s forwards 1.25s;
         }
 
         > .block:nth-child(3) {
           grid-column: 2 / 2;
           grid-row: 2 / 3;
-          animation: reveal 1s backwards 1.5s;
+          opacity: 0;
+          animation: reveal 1s forwards 1.5s;
 
           @media ${device.tablet} {
             grid-column: 3 / 4;

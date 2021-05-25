@@ -43,11 +43,11 @@ const AboutContainer = styled.div`
         font-size: 1em;
         line-height: 1.4;
         margin-bottom: 2em;
-        animation: reveal 1s backwards 0.25s;
+        animation: reveal 1s forwards 0.25s;
+        opacity: 0;
 
         @keyframes reveal {
           0% {
-            opacity: 0;
             transform: translateY(20px);
           }
           100% {
@@ -92,7 +92,8 @@ const AboutContainer = styled.div`
         font-weight: ${FONT_WEIGHT.regular};
         word-break: keep-all;
         letter-spacing: 0.8px;
-        animation: reveal 1s backwards 0.5s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.5s;
 
         @media ${device.tablet} {
           font-size: 1.5em;
@@ -127,7 +128,8 @@ const AboutContainer = styled.div`
       }
 
       > a {
-        animation: reveal 1s backwards 0.75s;
+        opacity: 0;
+        animation: reveal 1s forwards 0.75s;
         display: inline-block;
       }
     }
