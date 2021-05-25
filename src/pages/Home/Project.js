@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../device";
 import { COLORS } from "../../styles/constant";
 import BoxWithIndex from "../../components/BoxWithIndex";
 import Title from "../../components/Title";
+import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
 
 const ProjectContainer = styled.div`
   background: ${COLORS.lightBlue};
@@ -46,15 +47,26 @@ const ProjectContainer = styled.div`
       }
 
       > h1 {
-        opacity: 0;
-        animation: reveal 1s forwards 0.25s;
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.25s;
+            `;
+        }}
       }
 
       > .dog-img {
         width: 45%;
         max-width: 28.1em;
-        opacity: 0;
-        animation: reveal 1s forwards 0.5s;
+
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.5s;
+            `;
+        }}
 
         @media ${device.tablet} {
           margin-top: 1.5em;
@@ -63,8 +75,13 @@ const ProjectContainer = styled.div`
     }
 
     > .project-desc {
-      opacity: 0;
-      animation: reveal 1s forwards 0.75s;
+      ${(props) => {
+        if (props.isVisible)
+          return css`
+            opacity: 0;
+            animation: reveal 1s forwards 0.75s;
+          `;
+      }}
 
       @media ${device.tablet} {
         height: auto;
@@ -101,8 +118,14 @@ const Project = () => {
     },
   ];
 
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4,
+  });
+
   return (
-    <ProjectContainer id="project">
+    <ProjectContainer id="project" ref={containerRef} isVisible={isVisible}>
       <div className="content-container">
         <div className="title-container">
           <Title

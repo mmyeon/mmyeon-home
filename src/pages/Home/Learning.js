@@ -148,7 +148,7 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
-      transform: rotate(10deg) translate(20px, 10px);
+      transform: rotate(0deg) translate(2px, 11px);
 
       ${(props) => {
         if (props.isVisible) {
@@ -167,7 +167,7 @@ const LearningContainer = styled.div`
 
         100% {
           opacity: 1;
-          transform: rotate(10deg) translate(20px, 10px);
+          transform: rotate(0deg) translate(2px, 11px);
         }
       }
 
