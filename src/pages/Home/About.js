@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import EmailButton from "../../components/Buttons/MailToButton";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 import { device } from "../../device";
+import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
 
 const AboutContainer = styled.div`
   width: 100vw;
@@ -43,8 +44,14 @@ const AboutContainer = styled.div`
         font-size: 1em;
         line-height: 1.4;
         margin-bottom: 2em;
-        animation: reveal 1s forwards 0.25s;
-        opacity: 0;
+
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.25s;
+            `;
+        }}
 
         @keyframes reveal {
           0% {
@@ -92,8 +99,14 @@ const AboutContainer = styled.div`
         font-weight: ${FONT_WEIGHT.regular};
         word-break: keep-all;
         letter-spacing: 0.8px;
-        opacity: 0;
-        animation: reveal 1s forwards 0.5s;
+
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.5s;
+            `;
+        }}
 
         @media ${device.tablet} {
           font-size: 1.5em;
@@ -128,9 +141,14 @@ const AboutContainer = styled.div`
       }
 
       > a {
-        opacity: 0;
-        animation: reveal 1s forwards 0.75s;
-        display: inline-block;
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.75s;
+              display: inline-block;
+            `;
+        }}
       }
     }
 
@@ -156,10 +174,17 @@ const AboutContainer = styled.div`
     > .walking-girl {
       position: relative;
       width: 16em;
-      padding: 2em 0;
+      padding: 3em 0;
       right: 9.5em;
-      opacity: 0;
-      animation: moving 1s forwards 1s;
+      top: 3em;
+
+      ${(props) => {
+        if (props.isVisible)
+          return css`
+            opacity: 0;
+            animation: moving 1s forwards 1s;
+          `;
+      }}
 
       @media ${device.tablet} {
         width: 30em;
@@ -173,13 +198,12 @@ const AboutContainer = styled.div`
 
       @keyframes moving {
         0% {
-          opacity: 0;
-          transform: translate(500px, 6%);
+          transform: translate(500px, 10%);
         }
 
         100% {
           opacity: 1;
-          transform: translate(0, 6%);
+          transform: translate(0, 0);
         }
       }
     }
@@ -208,8 +232,14 @@ const AboutContainer = styled.div`
 `;
 
 const About = () => {
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
+
   return (
-    <AboutContainer id="home">
+    <AboutContainer id="home" ref={containerRef} isVisible={isVisible}>
       <div className="content-container">
         <div className="text-container">
           <div className="title-container">

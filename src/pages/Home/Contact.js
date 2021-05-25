@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { COLORS } from "../../styles/constant";
 import Title from "../../components/Title";
 import OutlineButton from "../../components/Buttons/OutlineButton";
 import { device } from "../../device";
+import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -43,8 +44,13 @@ const ContactContainer = styled.div`
     }
 
     > h1 {
-      opacity: 0;
-      animation: reveal 1s forwards 0.25s;
+      ${(props) => {
+        if (props.isVisible)
+          return css`
+            opacity: 0;
+            animation: reveal 1s forwards 0.25s;
+          `;
+      }}
     }
 
     > .btn-container {
@@ -57,18 +63,23 @@ const ContactContainer = styled.div`
         margin: 1em auto;
       }
 
-      > li:nth-child(1) {
-        opacity: 0;
-        animation: reveal 1s forwards 0.5s;
-      }
-      > li:nth-child(2) {
-        opacity: 0;
-        animation: reveal 1s forwards 0.75s;
-      }
-      > li:nth-child(3) {
-        opacity: 0;
-        animation: reveal 1s forwards 1s;
-      }
+      ${(props) => {
+        if (props.isVisible)
+          return css`
+            > li:nth-child(1) {
+              opacity: 0;
+              animation: reveal 1s forwards 0.5s;
+            }
+            > li:nth-child(2) {
+              opacity: 0;
+              animation: reveal 1s forwards 0.75s;
+            }
+            > li:nth-child(3) {
+              opacity: 0;
+              animation: reveal 1s forwards 1s;
+            }
+          `;
+      }}
     }
   }
 
@@ -77,9 +88,15 @@ const ContactContainer = styled.div`
     display: block;
     margin: 0 auto;
     margin-top: 0.4em;
-    animation: shake 1s linear 1.25s forwards;
     transition: 0.3s;
-    opacity: 0;
+
+    ${(props) => {
+      if (props.isVisible)
+        return css`
+          opacity: 0;
+          animation: shake 1s linear 1.25s forwards;
+        `;
+    }}
 
     @media ${device.tablet} {
       width: 20em;
@@ -124,6 +141,12 @@ const ContactContainer = styled.div`
 `;
 
 const Contact = () => {
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
+
   const contactList = [
     { title: "github", link: "https://github.com/mmyeon" },
 
@@ -138,7 +161,7 @@ const Contact = () => {
   ];
 
   return (
-    <ContactContainer id="contact">
+    <ContactContainer id="contact" ref={containerRef} isVisible={isVisible}>
       <div className="content">
         <Title text="제 발자국을 공유합니다" />
 

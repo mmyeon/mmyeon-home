@@ -50,8 +50,14 @@ const LearningContainer = styled.div`
       position: relative;
 
       > h1 {
-        opacity: 0;
-        animation: reveal 1s forwards 0.5s;
+        ${(props) => {
+          if (props.isVisible) {
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.5s;
+            `;
+          }
+        }}
       }
 
       > .avatar-talk {
@@ -60,8 +66,15 @@ const LearningContainer = styled.div`
         align-items: center;
         justify-content: center;
         padding: 1.5em 0;
-        opacity: 0;
-        animation: reveal 1s forwards 0.75s;
+
+        ${(props) => {
+          if (props.isVisible) {
+            return css`
+              opacity: 0;
+              animation: reveal 1s forwards 0.75s;
+            `;
+          }
+        }}
 
         @media ${device.tablet} {
           flex-direction: row;
@@ -98,21 +111,30 @@ const LearningContainer = styled.div`
         justify-content: center;
         text-align: center;
 
-        > .block:nth-child(1) {
-          opacity: 0;
-          animation: reveal 1s forwards 1s;
-        }
+        ${(props) => {
+          if (props.isVisible) {
+            return css`
+              > .block:nth-child(1) {
+                opacity: 0;
+                animation: reveal 1s forwards 1s;
+              }
 
-        > .block:nth-child(2) {
-          opacity: 0;
-          animation: reveal 1s forwards 1.25s;
-        }
+              > .block:nth-child(2) {
+                opacity: 0;
+                animation: reveal 1s forwards 1.25s;
+              }
+
+              > .block:nth-child(3) {
+                opacity: 0;
+                animation: reveal 1s forwards 1.5s;
+              }
+            `;
+          }
+        }}
 
         > .block:nth-child(3) {
           grid-column: 2 / 2;
           grid-row: 2 / 3;
-          opacity: 0;
-          animation: reveal 1s forwards 1.5s;
 
           @media ${device.tablet} {
             grid-column: 3 / 4;
@@ -128,9 +150,14 @@ const LearningContainer = styled.div`
       left: -7.5em;
       transform: rotate(10deg) translate(20px, 10px);
 
-      &.visible {
-        animation: move-foward 1s forwards 0.25s;
-      }
+      ${(props) => {
+        if (props.isVisible) {
+          return css`
+            opacity: 0;
+            animation: move-foward 1s forwards 0.25s;
+          `;
+        }
+      }}
 
       @keyframes move-foward {
         0% {
@@ -187,8 +214,6 @@ const Learning = () => {
     },
   ];
 
-  let className = isVisible ? "rocket-img visible" : "rocket-img";
-
   return (
     <LearningContainer id="learning" ref={containerRef} isVisible={isVisible}>
       <div className="content-container">
@@ -217,7 +242,7 @@ const Learning = () => {
           </div>
         </div>
         <img
-          className={className}
+          className="rocket-img"
           src="/assets/images/learning-rocket.png"
           alt="rocket"
         />
