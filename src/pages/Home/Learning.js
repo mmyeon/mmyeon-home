@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../device";
 import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
@@ -126,7 +126,7 @@ const LearningContainer = styled.div`
       width: 19em;
       top: -11.5em;
       left: -7.5em;
-      transform: rotate(10deg) translate(50px, 10px);
+      transform: rotate(10deg) translate(20px, 10px);
 
       &.visible {
         animation: move-foward 1s forwards 0.25s;
@@ -140,7 +140,7 @@ const LearningContainer = styled.div`
 
         100% {
           opacity: 1;
-          transform: rotate(10deg) translate(50px, 10px);
+          transform: rotate(10deg) translate(20px, 10px);
         }
       }
 
@@ -190,7 +190,7 @@ const Learning = () => {
   let className = isVisible ? "rocket-img visible" : "rocket-img";
 
   return (
-    <LearningContainer id="learning" ref={containerRef}>
+    <LearningContainer id="learning" ref={containerRef} isVisible={isVisible}>
       <div className="content-container">
         <div className="content">
           <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
