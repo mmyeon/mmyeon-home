@@ -1,9 +1,8 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { device } from "../../device";
-import { COLORS } from "../../styles/constant";
+import { device } from "../../../device";
+import { COLORS } from "../../../styles/constant";
 
-const HambergurBtnContainer = styled.div`
+export const HamburgerBtnContainer = styled.div`
   position: fixed;
   width: 3.7em;
   height: 3.7em;
@@ -81,13 +80,3 @@ const HambergurBtnContainer = styled.div`
     }
   }
 `;
-
-const HambergurBtn = ({ toggleNavBar, isNavBarOpen }) => {
-  return (
-    <HambergurBtnContainer isNavBarOpen={isNavBarOpen}>
-      <div className="menu-btn-burger" onClick={toggleNavBar}></div>
-    </HambergurBtnContainer>
-  );
-};
-
-export default HambergurBtn;

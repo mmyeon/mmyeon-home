@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import HambergurBtn from "./HambergurBtn";
+import HamburgerBtn from "./HamburgerBtn";
 import NavBar from "./NavBar";
 import { DEVICE_WIDTH_TABLET } from "../../device";
 
@@ -7,6 +7,7 @@ const Gnb = () => {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
 
+  // TODO: 주석 추가
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     setWindowWidth(window.innerWidth);
@@ -22,7 +23,7 @@ const Gnb = () => {
         <NavBar />
       ) : (
         <>
-          <HambergurBtn
+          <HamburgerBtn
             toggleNavBar={toggleNavBar}
             isNavBarOpen={isNavBarOpen}
           />

@@ -1,11 +1,8 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import EmailButton from "../../components/Buttons/MailToButton";
-import { COLORS, FONT_WEIGHT } from "../../styles/constant";
-import { device } from "../../device";
-import { useTargetOnScreen } from "../../hooks/useTargetOnScreen";
+import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
+import { device } from "../../../device";
 
-const AboutContainer = styled.div`
+export const AboutContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: ${COLORS.yellow};
@@ -134,7 +131,7 @@ const AboutContainer = styled.div`
           }
         }
 
-        .bold {
+        > b {
           font-weight: 700;
           letter-spacing: 0.2em;
         }
@@ -230,52 +227,3 @@ const AboutContainer = styled.div`
     }
   }
 `;
-
-const About = () => {
-  const [containerRef, isVisible] = useTargetOnScreen({
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-  });
-
-  return (
-    <AboutContainer id="home" ref={containerRef} isVisible={isVisible}>
-      <div className="content-container">
-        <div className="text-container">
-          <div className="title-container">
-            <h1 className="name">Miyeon Lim,</h1>
-            <h2>I am</h2>
-            <h1 className="job">Frontend Developer</h1>
-          </div>
-          <p className="desc">
-            <span className="highlight">요가</span>와{" "}
-            <span className="highlight">개</span>를 사랑하고{" "}
-            <span className="highlight">지속적인 성장</span>을 추구하는 개발자
-            <span className="bold"> 임미연</span>입니다.
-          </p>
-          <EmailButton title="hire me" />
-        </div>
-        <img
-          className="blob"
-          src="/assets/images/blob.png"
-          alt="blob
-      "
-        />
-        <img
-          className="walking-girl"
-          src="/assets/images/landing-main.png"
-          alt="walking girl
-      "
-        />
-        <img
-          className="downward-arrow"
-          src="/assets/images/arrow-icon.png"
-          alt="downward arrow
-      "
-        />
-      </div>
-    </AboutContainer>
-  );
-};
-
-export default About;

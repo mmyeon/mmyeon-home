@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import { device } from "../../device";
-import { COLORS, FONT_WEIGHT } from "../../styles/constant";
+import { device } from "../../../device";
+import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
 
-const NavBarContainer = styled.nav`
+export const NavBarContainer = styled.nav`
   background: white;
   position: fixed;
   top: 3.5em;
@@ -55,23 +54,3 @@ const NavBarContainer = styled.nav`
     }
   }
 `;
-
-const NavBar = ({ toggleNavBar }) => {
-  const navBarList = ["home", "learning", "project", "contact"];
-
-  return (
-    <NavBarContainer>
-      <ul className="menu-dropdown">
-        {navBarList.map((item) => (
-          <li key={item}>
-            <a href={`#${item}`} onClick={toggleNavBar}>
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </NavBarContainer>
-  );
-};
-
-export default NavBar;
