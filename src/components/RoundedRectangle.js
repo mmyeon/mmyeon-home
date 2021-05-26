@@ -18,7 +18,7 @@ const Container = styled.a`
   line-height: 1.2;
   letter-spacing: 0.7px;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.3s;
 
   &:hover {
     transform: translateY(-5px);
