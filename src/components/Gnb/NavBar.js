@@ -45,6 +45,7 @@ const NavBarContainer = styled.nav`
 
       @media ${device.desktop} {
         border: none;
+        font-size: 3em;
 
         &:hover {
           letter-spacing: 0.2em;
