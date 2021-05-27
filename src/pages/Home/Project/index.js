@@ -5,7 +5,13 @@ import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
 
 const Project = () => {
-  const projectList = [
+  const [containerRef, isVisible] = useTargetOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4,
+  });
+
+  const PROJECT_LIST = [
     {
       title: "DogIn",
       img: "/assets/images/project-dog.png",
@@ -19,12 +25,6 @@ const Project = () => {
       link: "https://dogin.mmyeon.com/",
     },
   ];
-
-  const [containerRef, isVisible] = useTargetOnScreen({
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4,
-  });
 
   return (
     <Styled.ProjectContainer
@@ -50,7 +50,7 @@ const Project = () => {
           />
         </div>
         <div className="project-desc">
-          {projectList.map((project) => (
+          {PROJECT_LIST.map((project) => (
             <CardWithIndex
               key={project.title}
               title={project.title}

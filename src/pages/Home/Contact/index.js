@@ -11,7 +11,7 @@ const Contact = () => {
     threshold: 0.8,
   });
 
-  const contactList = [
+  const CONTACT_LIST = [
     { title: "github", link: "https://github.com/mmyeon" },
 
     {
@@ -34,7 +34,7 @@ const Contact = () => {
         <Title text="제 발자국을 공유합니다" />
 
         <ul className="btn-container">
-          {contactList.map((contact) => (
+          {CONTACT_LIST.map((contact) => (
             <li key={contact.title}>
               <ButtonWithOutline title={contact.title} link={contact.link} />
             </li>

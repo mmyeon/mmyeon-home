@@ -12,7 +12,7 @@ const Learning = () => {
     threshold: 0.8,
   });
 
-  const linkList = [
+  const LINK_LIST = [
     {
       title: "블로그",
       url: "https://til.mmyeon.com/",
@@ -50,7 +50,7 @@ const Learning = () => {
             </span>
           </div>
           <div className="links">
-            {linkList.map((item) => (
+            {LINK_LIST.map((item) => (
               <RoundedRectangle
                 key={item.title}
                 title={item.title}
