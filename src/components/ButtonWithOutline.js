@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "./Button";
 import styled from "styled-components";
-import { COLORS } from "../../styles/constant";
-import { device } from "../../device";
+import { COLORS } from "../styles/constant";
+import { device } from "../device";
 
-const StyledOutlineButton = styled.a`
+const StyledButtonWithOutline = styled.a`
   > button {
     background: ${COLORS.white};
     color: ${COLORS.darkBlue};
@@ -24,12 +24,12 @@ const StyledOutlineButton = styled.a`
   }
 `;
 
-const ContactButton = ({ title, link }) => {
+const ButtonWithOutline = ({ title, link }) => {
   return (
-    <StyledOutlineButton href={link} target="_blank">
+    <StyledButtonWithOutline href={link} target="_blank">
       <Button title={title} />
-    </StyledOutlineButton>
+    </StyledButtonWithOutline>
   );
 };
 
-export default ContactButton;
+export default ButtonWithOutline;

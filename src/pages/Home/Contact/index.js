@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../../components/Title";
-import OutlineButton from "../../../components/Buttons/OutlineButton";
+import ButtonWithOutline from "../../../components/ButtonWithOutline";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
 
@@ -36,7 +36,7 @@ const Contact = () => {
         <ul className="btn-container">
           {contactList.map((contact) => (
             <li key={contact.title}>
-              <OutlineButton title={contact.title} link={contact.link} />
+              <ButtonWithOutline title={contact.title} link={contact.link} />
             </li>
           ))}
         </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import EmailButton from "../../../components/Buttons/MailToButton";
+import ButtonForSendingEmail from "../../../components/ButtonForSendingEmail";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
 
@@ -15,7 +15,7 @@ const About = () => {
       <div className="content-container">
         <div className="text-container">
           <div className="title-container">
-            {/* TODO: 시맨틱태그 합리화 */}
+            {/* TODO: 시맨틱태그 올바르게 개선하기 */}
             <h1 className="name">Miyeon Lim,</h1>
             <h2>I am</h2>
             <h1 className="job">Frontend Developer</h1>
@@ -28,7 +28,7 @@ const About = () => {
             <b> 임미연</b> 입니다.
           </p>
 
-          <EmailButton title="hire me" />
+          <ButtonForSendingEmail title="hire me" />
         </div>
 
         <img className="blob" src="/assets/images/blob.png" alt="blob" />

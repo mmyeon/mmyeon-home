@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FONT_WEIGHT } from "../../styles/constant";
+import { FONT_WEIGHT } from "../styles/constant";
 
 const ButtonContainer = styled.button`
   background: ${(props) => props.backgroundColor};

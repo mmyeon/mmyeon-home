@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
-import Button from "./Buttons/Button";
+import Button from "./Button";
 
 const Container = styled.div`
   position: relative;
