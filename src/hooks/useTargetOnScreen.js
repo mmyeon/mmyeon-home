@@ -4,7 +4,7 @@ export const useTargetOnScreen = (options) => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
 
-  const callbackFunction = (entries) => {
+  const callback = (entries) => {
     const [entry] = entries;
     let timerId;
 
@@ -20,7 +20,7 @@ export const useTargetOnScreen = (options) => {
 
   useEffect(() => {
     const targetElem = containerRef.current;
-    const observer = new IntersectionObserver(callbackFunction, options);
+    const observer = new IntersectionObserver(callback, options);
 
     if (targetElem) {
       observer.observe(targetElem);
