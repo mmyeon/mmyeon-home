@@ -1,5 +1,5 @@
 import React from "react";
-import BoxWithIndex from "../../../components/BoxWithIndex";
+import CardWithIndex from "../../../components/CardWithIndex";
 import Title from "../../../components/Title";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
@@ -51,7 +51,7 @@ const Project = () => {
         </div>
         <div className="project-desc">
           {projectList.map((project) => (
-            <BoxWithIndex
+            <CardWithIndex
               key={project.title}
               title={project.title}
               img={project.img}

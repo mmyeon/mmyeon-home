@@ -65,7 +65,7 @@ const Index = styled.span`
   border-bottom: none;
 `;
 
-const BoxWithIndex = ({ title, img, desc, link }) => {
+const CardWithIndex = ({ title, img, desc, link }) => {
   return (
     <Container>
       <Index>{title}</Index>
@@ -80,4 +80,4 @@ const BoxWithIndex = ({ title, img, desc, link }) => {
   );
 };
 
-export default BoxWithIndex;
+export default CardWithIndex;
