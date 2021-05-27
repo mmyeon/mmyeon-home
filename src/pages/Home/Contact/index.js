@@ -43,7 +43,7 @@ const Contact = () => {
       </div>
 
       <img
-        src="/assets/images/contact-jump.png"
+        src="/assets/images/home/contact-jump.png"
         alt="jumping person"
         className="jumping"
       />

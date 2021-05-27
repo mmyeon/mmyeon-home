@@ -14,13 +14,13 @@ const Project = () => {
   const PROJECT_LIST = [
     {
       title: "DogIn",
-      img: "/assets/images/project-dog.png",
+      img: "/assets/images/home/project-dog.png",
       desc: "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
       link: "https://dogin.mmyeon.com/",
     },
     {
       title: "YOGA",
-      img: "/assets/images/project-dog.png",
+      img: "/assets/images/home/project-dog.png",
       desc: "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
       link: "https://dogin.mmyeon.com/",
     },
@@ -45,7 +45,7 @@ const Project = () => {
 
           <img
             className="dog-img"
-            src="/assets/images/project-dog.png"
+            src="/assets/images/home/project-dog.png"
             alt="dog"
           />
         </div>

@@ -31,17 +31,17 @@ const About = () => {
           <ButtonForSendingEmail title="hire me" />
         </div>
 
-        <img className="blob" src="/assets/images/blob.png" alt="blob" />
+        <img className="blob" src="/assets/images/home/blob.png" alt="blob" />
 
         <img
           className="walking-girl"
-          src="/assets/images/landing-main.png"
+          src="/assets/images/home/landing-main.png"
           alt="walking girl"
         />
 
         <img
           className="downward-arrow"
-          src="/assets/images/arrow-icon.png"
+          src="/assets/images/home/arrow-icon.png"
           alt="downward arrow"
         />
       </div>

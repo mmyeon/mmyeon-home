@@ -43,7 +43,7 @@ const Learning = () => {
           <div className="avatar-talk">
             <img
               className="avatar-img"
-              src="/assets/images/avatar.png"
+              src="/assets/images/home/avatar.png"
               alt="avatar"
             />
 
@@ -67,7 +67,7 @@ const Learning = () => {
 
         <img
           className="rocket-img"
-          src="/assets/images/learning-rocket.png"
+          src="/assets/images/home/learning-rocket.png"
           alt="rocket"
         />
       </div>
