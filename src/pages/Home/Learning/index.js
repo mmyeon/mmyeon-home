@@ -39,16 +39,19 @@ const Learning = () => {
       <div className="content-container">
         <div className="content">
           <Title text="스몰 스텝을 사랑하는 개발자의 학습방법" />
+
           <div className="avatar-talk">
             <img
               className="avatar-img"
               src="/assets/images/avatar.png"
               alt="avatar"
             />
+
             <span className="avatar-desc">
               WILT(What I Learnt Today)를 기록하며 매일매일 성장하고 있습니다.
             </span>
           </div>
+
           <div className="links">
             {LINK_LIST.map((item) => (
               <RoundedRectangle
@@ -61,6 +64,7 @@ const Learning = () => {
             ))}
           </div>
         </div>
+
         <img
           className="rocket-img"
           src="/assets/images/learning-rocket.png"

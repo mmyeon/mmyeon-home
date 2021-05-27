@@ -41,6 +41,7 @@ const Contact = () => {
           ))}
         </ul>
       </div>
+
       <img
         src="/assets/images/contact-jump.png"
         alt="jumping person"

@@ -49,6 +49,7 @@ const Project = () => {
             alt="dog"
           />
         </div>
+
         <div className="project-desc">
           {PROJECT_LIST.map((project) => (
             <CardWithIndex

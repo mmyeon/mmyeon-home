@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <>
       <Gnb />
+
       <HomeContainer>
         <About />
         <Learning />
