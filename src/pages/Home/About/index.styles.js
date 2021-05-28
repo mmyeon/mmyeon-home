@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
 import { device } from "../../../device";
+import { reveal, gradient, moving } from "../../../styles/animation";
 
 export const AboutContainer = styled.div`
   width: 100vw;
@@ -46,18 +47,9 @@ export const AboutContainer = styled.div`
           if (props.isVisible)
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.25s;
+              animation: ${reveal} 1s forwards 0.25s;
             `;
         }}
-
-        @keyframes reveal {
-          0% {
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-          }
-        }
 
         > .name {
           font-size: 2.06em;
@@ -101,7 +93,7 @@ export const AboutContainer = styled.div`
           if (props.isVisible)
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.5s;
+              animation: ${reveal} 1s forwards 0.5s;
             `;
         }}
 
@@ -115,20 +107,8 @@ export const AboutContainer = styled.div`
           background: linear-gradient(180deg, transparent 57%, #29fea6 47%);
           padding: 0 0.2em;
           background-size: 150% 150%;
-          animation: gradient 2s cubic-bezier(0.4, 0, 1, 1);
+          animation: ${gradient} 2s cubic-bezier(0.4, 0, 1, 1);
           animation-fill-mode: forwards;
-
-          @keyframes gradient {
-            0% {
-              background-position: 0% 0%;
-            }
-            50% {
-              background-position: 50% 50%;
-            }
-            100% {
-              background-position: 50% 50%;
-            }
-          }
         }
 
         > b {
@@ -142,7 +122,7 @@ export const AboutContainer = styled.div`
           if (props.isVisible)
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.75s;
+              animation: ${reveal} 1s forwards 0.75s;
               display: inline-block;
             `;
         }}
@@ -179,7 +159,7 @@ export const AboutContainer = styled.div`
         if (props.isVisible)
           return css`
             opacity: 0;
-            animation: moving 1s forwards 1s;
+            animation: ${moving} 1s forwards 1s;
           `;
       }}
 
@@ -191,17 +171,6 @@ export const AboutContainer = styled.div`
       @media ${device.desktop} {
         width: 42em;
         right: 10em;
-      }
-
-      @keyframes moving {
-        0% {
-          transform: translate(500px, 10%);
-        }
-
-        100% {
-          opacity: 1;
-          transform: translate(0, 0);
-        }
       }
     }
 
