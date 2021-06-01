@@ -42,3 +42,28 @@ export const moveUpDown = keyframes`
       transform: translate(-50%, -2.5em);
       }
 `;
+
+export const shake = keyframes`
+   \ 0%,
+   \ 100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+   \ 10%,
+   \ 30%,
+   \ 50%,
+   \ 70% {
+      transform: translateY(-0.4em);
+    }
+   \ 20%,
+   \ 40%,
+   \ 60% {
+      transform: translateY(0.4em);
+    }
+   \ 80% {
+      transform: translateY(0.3em);
+    }
+   \ 90% {
+      transform: translateY(-0.3em);
+    }
+`;

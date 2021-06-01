@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { COLORS } from "../../../styles/constant";
 import { device } from "../../../device";
+import { reveal, shake } from "../../../styles/animation";
 
 export const ContactContainer = styled.div`
   width: 100%;
@@ -44,7 +45,7 @@ export const ContactContainer = styled.div`
         if (props.isVisible)
           return css`
             opacity: 0;
-            animation: reveal 1s forwards 0.25s;
+            animation: ${reveal} 1s forwards 0.25s;
           `;
       }}
     }
@@ -64,15 +65,15 @@ export const ContactContainer = styled.div`
           return css`
             > li:nth-child(1) {
               opacity: 0;
-              animation: reveal 1s forwards 0.5s;
+              animation: ${reveal} 1s forwards 0.5s;
             }
             > li:nth-child(2) {
               opacity: 0;
-              animation: reveal 1s forwards 0.75s;
+              animation: ${reveal} 1s forwards 0.75s;
             }
             > li:nth-child(3) {
               opacity: 0;
-              animation: reveal 1s forwards 1s;
+              animation: ${reveal} 1s forwards 1s;
             }
           `;
       }}
@@ -90,7 +91,7 @@ export const ContactContainer = styled.div`
       if (props.isVisible)
         return css`
           opacity: 0;
-          animation: shake 1s linear 1.25s forwards;
+          animation: ${shake} 1s linear 1.25s forwards;
         `;
     }}
 
@@ -98,40 +99,6 @@ export const ContactContainer = styled.div`
       width: 20em;
       margin: 0;
       margin-left: 4em;
-    }
-  }
-
-  @keyframes reveal {
-    0% {
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes shake {
-    0%,
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    10%,
-    30%,
-    50%,
-    70% {
-      transform: translateY(-0.4em);
-    }
-    20%,
-    40%,
-    60% {
-      transform: translateY(0.4em);
-    }
-    80% {
-      transform: translateY(0.3em);
-    }
-    90% {
-      transform: translateY(-0.3em);
     }
   }
 `;
