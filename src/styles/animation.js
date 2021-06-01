@@ -6,7 +6,7 @@ export const reveal = keyframes`
     }
     \ 100% {
       opacity: 1;
-      }
+    }
 `;
 
 export const flyInFromRight = keyframes`
@@ -16,7 +16,18 @@ export const flyInFromRight = keyframes`
     \ 100% {
       opacity: 1;
       transform: translate(0, 0);
-      }
+    }
+`;
+
+export const flyInFromLeft = keyframes`
+    \ 0% {
+      opacity: 0;
+      transform: rotate(20deg) translate(-100px, -20px);
+    }
+    \ 100% {
+      opacity: 1;
+      transform: rotate(0deg) translate(2px, 11px);
+    }
 `;
 
 export const fillBackgroundColor = keyframes`
@@ -28,7 +39,7 @@ export const fillBackgroundColor = keyframes`
     }
     \ 100% {
       background-position: 50% 50%;
-      }
+    }
 `;
 
 export const moveUpDown = keyframes`
@@ -40,7 +51,7 @@ export const moveUpDown = keyframes`
     }
     \ 100% {
       transform: translate(-50%, -2.5em);
-      }
+    }
 `;
 
 export const shake = keyframes`

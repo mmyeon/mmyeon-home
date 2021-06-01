@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../device";
+import { flyInFromLeft, reveal } from "../../../styles/animation";
 import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
 
 export const LearningContainer = styled.div`
@@ -33,15 +34,6 @@ export const LearningContainer = styled.div`
       padding-top: 0;
     }
 
-    @keyframes reveal {
-      0% {
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
     .content {
       position: relative;
 
@@ -50,7 +42,7 @@ export const LearningContainer = styled.div`
           if (props.isVisible) {
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.5s;
+              animation: ${reveal} 1s forwards 0.5s;
             `;
           }
         }}
@@ -67,7 +59,7 @@ export const LearningContainer = styled.div`
           if (props.isVisible) {
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.75s;
+              animation: ${reveal} 1s forwards 0.75s;
             `;
           }
         }}
@@ -112,17 +104,17 @@ export const LearningContainer = styled.div`
             return css`
               > .block:nth-child(1) {
                 opacity: 0;
-                animation: reveal 1s forwards 1s;
+                animation: ${reveal} 1s forwards 1s;
               }
 
               > .block:nth-child(2) {
                 opacity: 0;
-                animation: reveal 1s forwards 1.25s;
+                animation: ${reveal} 1s forwards 1.25s;
               }
 
               > .block:nth-child(3) {
                 opacity: 0;
-                animation: reveal 1s forwards 1.5s;
+                animation: ${reveal} 1s forwards 1.5s;
               }
             `;
           }
@@ -150,22 +142,10 @@ export const LearningContainer = styled.div`
         if (props.isVisible) {
           return css`
             opacity: 0;
-            animation: move-foward 1s forwards 0.25s;
+            animation: ${flyInFromLeft} 1s forwards 0.25s;
           `;
         }
       }}
-
-      @keyframes move-foward {
-        0% {
-          opacity: 0;
-          transform: rotate(20deg) translate(-100px, -20px);
-        }
-
-        100% {
-          opacity: 1;
-          transform: rotate(0deg) translate(2px, 11px);
-        }
-      }
 
       @media ${device.tablet} {
         width: 25em;
