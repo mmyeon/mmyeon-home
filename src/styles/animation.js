@@ -9,7 +9,7 @@ export const reveal = keyframes`
       }
 `;
 
-export const flyIn = keyframes`
+export const flyInFromRight = keyframes`
     \ 0% {
       transform: translate(500px, 10%);
     }

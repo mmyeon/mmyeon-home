@@ -4,7 +4,7 @@ import { device } from "../../../device";
 import {
   reveal,
   fillBackgroundColor,
-  flyIn,
+  flyInFromRight,
   moveUpDown,
 } from "../../../styles/animation";
 
@@ -164,7 +164,7 @@ export const AboutContainer = styled.div`
         if (props.isVisible)
           return css`
             opacity: 0;
-            animation: ${flyIn} 1s forwards 1s;
+            animation: ${flyInFromRight} 1s forwards 1s;
           `;
       }}
 
