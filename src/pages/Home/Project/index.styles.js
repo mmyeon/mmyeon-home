@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../device";
+import { reveal } from "../../../styles/animation";
 import { COLORS } from "../../../styles/constant";
 
 export const ProjectContainer = styled.div`
@@ -47,7 +48,7 @@ export const ProjectContainer = styled.div`
           if (props.isVisible)
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.25s;
+              animation: ${reveal} 1s forwards 0.25s;
             `;
         }}
       }
@@ -60,7 +61,7 @@ export const ProjectContainer = styled.div`
           if (props.isVisible)
             return css`
               opacity: 0;
-              animation: reveal 1s forwards 0.5s;
+              animation: ${reveal} 1s forwards 0.5s;
             `;
         }}
 
@@ -75,7 +76,7 @@ export const ProjectContainer = styled.div`
         if (props.isVisible)
           return css`
             opacity: 0;
-            animation: reveal 1s forwards 0.75s;
+            animation: ${reveal} 1s forwards 0.75s;
           `;
       }}
 
@@ -85,15 +86,6 @@ export const ProjectContainer = styled.div`
         padding-top: 10em;
         padding-left: 2em;
       }
-    }
-  }
-
-  @keyframes reveal {
-    0% {
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
     }
   }
 `;
