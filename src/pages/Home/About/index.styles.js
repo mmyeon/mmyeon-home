@@ -1,7 +1,12 @@
 import styled, { css } from "styled-components";
 import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
 import { device } from "../../../device";
-import { reveal, gradient, moving } from "../../../styles/animation";
+import {
+  reveal,
+  fillBackgroundColor,
+  flyIn,
+  moveUpDown,
+} from "../../../styles/animation";
 
 export const AboutContainer = styled.div`
   width: 100vw;
@@ -107,7 +112,7 @@ export const AboutContainer = styled.div`
           background: linear-gradient(180deg, transparent 57%, #29fea6 47%);
           padding: 0 0.2em;
           background-size: 150% 150%;
-          animation: ${gradient} 2s cubic-bezier(0.4, 0, 1, 1);
+          animation: ${fillBackgroundColor} 2s cubic-bezier(0.4, 0, 1, 1);
           animation-fill-mode: forwards;
         }
 
@@ -159,7 +164,7 @@ export const AboutContainer = styled.div`
         if (props.isVisible)
           return css`
             opacity: 0;
-            animation: ${moving} 1s forwards 1s;
+            animation: ${flyIn} 1s forwards 1s;
           `;
       }}
 
@@ -180,19 +185,7 @@ export const AboutContainer = styled.div`
       position: absolute;
       bottom: 1em;
       left: 50%;
-      animation: move 0.9s infinite;
-
-      @keyframes move {
-        0% {
-          transform: translate(-50%, -2.5em);
-        }
-        50% {
-          transform: translate(-50%, -2em);
-        }
-        100% {
-          transform: translate(-50%, -2.5em);
-        }
-      }
+      animation: ${moveUpDown} 0.9s infinite;
     }
   }
 `;

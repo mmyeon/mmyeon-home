@@ -9,7 +9,7 @@ export const reveal = keyframes`
       }
 `;
 
-export const moving = keyframes`
+export const flyIn = keyframes`
     \ 0% {
       transform: translate(500px, 10%);
     }
@@ -19,7 +19,7 @@ export const moving = keyframes`
       }
 `;
 
-export const gradient = keyframes`
+export const fillBackgroundColor = keyframes`
     \ 0% {
       background-position: 0% 0%;
     }
@@ -28,5 +28,17 @@ export const gradient = keyframes`
     }
     \ 100% {
       background-position: 50% 50%;
+      }
+`;
+
+export const moveUpDown = keyframes`
+    \ 0% {
+      transform: translate(-50%, -2.5em);
+    }
+    \ 50% {
+      transform: translate(-50%, -2em);
+    }
+    \ 100% {
+      transform: translate(-50%, -2.5em);
       }
 `;
