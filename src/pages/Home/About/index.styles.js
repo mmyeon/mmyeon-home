@@ -142,8 +142,8 @@ export const AboutContainer = styled.div`
 
       @media ${device.tablet} {
         width: 24em;
-        left: -5em;
-        top: 10em;
+        left: -1em;
+        top: 7em;
       }
 
       @media ${device.desktop} {
