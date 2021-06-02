@@ -183,7 +183,7 @@ export const AboutContainer = styled.div`
       width: 3em;
       height: 3em;
       position: absolute;
-      bottom: 1em;
+      bottom: 10%;
       left: 50%;
       animation: ${moveUpDown} 0.9s infinite;
     }
