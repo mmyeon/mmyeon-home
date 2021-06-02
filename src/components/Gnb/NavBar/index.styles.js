@@ -36,7 +36,6 @@ export const NavBarContainer = styled.nav`
       font-size: 2.3em;
       font-weight: ${FONT_WEIGHT.semiBold};
       margin: 0.5em 0;
-      border-bottom: 6px solid ${COLORS.lightSkyBlue};
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 0.05em;
