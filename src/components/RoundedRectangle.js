@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const Container = styled.a`
@@ -20,8 +21,10 @@ const Container = styled.a`
   cursor: pointer;
   transition: all 0.3s;
 
-  &:hover {
-    transform: translateY(-5px);
+  @media ${device.desktop} {
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 `;
 
