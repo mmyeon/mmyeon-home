@@ -10,6 +10,10 @@ const StyledTitle = styled.h1`
   letter-spacing: 0.07em;
   word-break: keep-all;
 
+  @media ${device.tablet} {
+    font-size: 2em;
+  }
+
   @media ${device.desktop} {
     font-size: 2.8em;
     text-align: left;
