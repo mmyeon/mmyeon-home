@@ -32,73 +32,89 @@ export const ContactContainer = styled.div`
     );
   }
 
-  > .content {
-    max-width: 100%;
-    margin: 0 auto;
-
-    @media ${device.tablet} {
-      margin: 0;
-    }
-
-    > h1 {
-      ${(props) => {
-        if (props.isVisible)
-          return css`
-            opacity: 0;
-            animation: ${reveal} 1s forwards 0.25s;
-          `;
-      }}
-    }
-
-    > .btn-container {
-      width: 100%;
-      margin-top: 0.5em;
-
-      @media ${device.tablet} {
-        max-width: 80%;
-        display: block;
-        margin: 1em auto;
-      }
-
-      ${(props) => {
-        if (props.isVisible)
-          return css`
-            > li:nth-child(1) {
-              opacity: 0;
-              animation: ${reveal} 1s forwards 0.5s;
-            }
-            > li:nth-child(2) {
-              opacity: 0;
-              animation: ${reveal} 1s forwards 0.75s;
-            }
-            > li:nth-child(3) {
-              opacity: 0;
-              animation: ${reveal} 1s forwards 1s;
-            }
-          `;
-      }}
-    }
-  }
-
-  > img.jumping {
-    width: 14em;
-    display: block;
-    margin: 0 auto;
-    margin-top: 0.4em;
-    transition: 0.3s;
+  > .content-wrapper {
+    transition: opacity 0.3s;
 
     ${(props) => {
-      if (props.isVisible)
+      if (!props.isVisible)
         return css`
           opacity: 0;
-          animation: ${shake} 1s linear 1.25s forwards;
         `;
     }}
 
-    @media ${device.tablet} {
-      width: 20em;
-      margin: 0;
-      margin-left: 4em;
+    @media ${device.desktop} {
+      display: flex;
+      flex-direction: row;
+    }
+
+    > .content {
+      max-width: 100%;
+      margin: 0 auto;
+
+      @media ${device.tablet} {
+        margin: 0;
+      }
+
+      > h1 {
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              opacity: 0;
+              animation: ${reveal} 1s forwards 0.25s;
+            `;
+        }}
+      }
+
+      > .btn-container {
+        width: 100%;
+        margin-top: 0.5em;
+        transition: all 0.3s;
+
+        @media ${device.tablet} {
+          max-width: 80%;
+          display: block;
+          margin: 1em auto;
+        }
+
+        ${(props) => {
+          if (props.isVisible)
+            return css`
+              > li:nth-child(1) {
+                opacity: 0;
+                animation: ${reveal} 1s forwards 0.5s;
+              }
+              > li:nth-child(2) {
+                opacity: 0;
+                animation: ${reveal} 1s forwards 0.75s;
+              }
+              > li:nth-child(3) {
+                opacity: 0;
+                animation: ${reveal} 1s forwards 1s;
+              }
+            `;
+        }}
+      }
+    }
+
+    > img.jumping {
+      width: 14em;
+      display: block;
+      margin: 0 auto;
+      margin-top: 0.4em;
+      opacity: 0;
+
+      ${(props) => {
+        if (props.isVisible)
+          return css`
+            animation: ${shake} 1s linear 1.25s forwards;
+          `;
+      }}
+
+      @media ${device.tablet} {
+        width: 20em;
+        margin: 0;
+        margin-left: 4em;
+      }
     }
   }
 `;

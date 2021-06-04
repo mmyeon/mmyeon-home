@@ -19,6 +19,14 @@ export const LearningContainer = styled.div`
     padding: 3em 1em;
     overflow: hidden;
     position: relative;
+    transition: opacity 0.3s;
+
+    ${(props) => {
+      if (!props.isVisible)
+        return css`
+          opacity: 0;
+        `;
+    }}
 
     @media ${device.tablet} {
       margin: 0 auto;
@@ -98,7 +106,10 @@ export const LearningContainer = styled.div`
         grid-template-columns: 100px 100px;
         justify-content: center;
         text-align: center;
+        transition: all 0.3s;
 
+        /* TODO: link리스트 한번 깜빡이는 문제 해결 */
+        /* link값이 isVisible이 적용되기 전에 opacity:1이 된다.  */
         ${(props) => {
           if (props.isVisible) {
             return css`

@@ -16,6 +16,14 @@ export const ProjectContainer = styled.div`
     padding: 0 2em;
     padding-bottom: 3em;
     position: relative;
+    transition: opacity 0.3s;
+
+    ${(props) => {
+      if (!props.isVisible)
+        return css`
+          opacity: 0;
+        `;
+    }}
 
     @media ${device.tablet} {
       flex-direction: row;

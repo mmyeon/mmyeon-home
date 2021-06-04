@@ -20,6 +20,15 @@ export const AboutContainer = styled.div`
     align-items: center;
     max-width: 250px;
     margin: 0 auto;
+    transition: opacity 0.3s;
+
+    ${(props) => {
+      if (!props.isVisible) {
+        return css`
+          opacity: 0;
+        `;
+      }
+    }}
 
     @media ${device.tablet} {
       max-width: 600px;

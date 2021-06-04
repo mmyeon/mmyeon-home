@@ -30,23 +30,25 @@ const Contact = () => {
       ref={containerRef}
       isVisible={isVisible}
     >
-      <div className="content">
-        <Title text="제 발자국을 공유합니다" />
+      <div className="content-wrapper">
+        <div className="content">
+          <Title text="제 발자국을 공유합니다" />
 
-        <ul className="btn-container">
-          {CONTACT_LIST.map((contact) => (
-            <li key={contact.title}>
-              <ButtonWithOutline title={contact.title} link={contact.link} />
-            </li>
-          ))}
-        </ul>
+          <ul className="btn-container">
+            {CONTACT_LIST.map((contact) => (
+              <li key={contact.title}>
+                <ButtonWithOutline title={contact.title} link={contact.link} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <img
+          src="/assets/images/home/contact-jump.png"
+          alt="jumping person"
+          className="jumping"
+        />
       </div>
-
-      <img
-        src="/assets/images/home/contact-jump.png"
-        alt="jumping person"
-        className="jumping"
-      />
     </Styled.ContactContainer>
   );
 };
