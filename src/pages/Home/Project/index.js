@@ -15,14 +15,14 @@ const Project = () => {
     {
       title: "DogIn",
       img: "/assets/images/home/project-dog.png",
-      desc: "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
+      desc: "강아지를 입양하기 전 고려해야 할 부분을 알려주는 프로젝트입니다.",
       link: "https://dogin.mmyeon.com/",
     },
     {
-      title: "YOGA",
-      img: "/assets/images/home/project-dog.png",
-      desc: "강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.강아지 입양을 신중하게 하자는 의도에서 만든 프로젝트입니다.",
-      link: "https://dogin.mmyeon.com/",
+      title: "mmyeon.com",
+      img: "/og-img.png",
+      desc: "개인 웹사이트 제작",
+      link: "https://mmyeon.com/",
     },
   ];
 

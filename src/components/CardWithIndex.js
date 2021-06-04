@@ -20,7 +20,7 @@ const Container = styled.div`
 
   > .content {
     background: white;
-    padding: 1em 1.5em;
+    padding: 1em;
     border-radius: 0 0 0.6em 0.6em;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ const Container = styled.div`
     }
 
     > * + * {
-      margin-top: 1em;
+      margin-top: 0.7em;
     }
 
     > a > button {
