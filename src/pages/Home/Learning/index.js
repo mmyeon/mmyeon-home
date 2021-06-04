@@ -20,7 +20,7 @@ const Learning = () => {
     },
     {
       title: "읽은 책 목록",
-      url: "https://til.mmyeon.com/",
+      url: "https://www.notion.so/e91e7e90a79f46bc92a66b584f34c0f0?v=b0de36586be345b1bea7d355e094f64a",
       backgroundColor: `${COLORS.lightGreen}`,
     },
     {
