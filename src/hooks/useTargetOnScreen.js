@@ -6,15 +6,11 @@ export const useTargetOnScreen = (options) => {
 
   const callback = (entries) => {
     const [entry] = entries;
-    let timerId;
 
     if (entry.isIntersecting) {
-      clearTimeout(timerId);
       setIsVisible(entry.isIntersecting);
-
-      timerId = setTimeout(() => {
-        setIsVisible(false);
-      }, 2000);
+    } else {
+      setIsVisible(false);
     }
   };
 
