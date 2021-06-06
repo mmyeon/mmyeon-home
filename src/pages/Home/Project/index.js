@@ -8,7 +8,7 @@ const Project = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.1,
   });
 
   const PROJECT_LIST = [
