@@ -7,10 +7,14 @@ import styled from "styled-components";
 const StyledLink = styled.a`
   > button {
     @media ${device.tablet} {
-      font-size: 1.2em;
-      left: 8em;
       position: relative;
       margin-top: 1em;
+      font-size: 1.2em;
+      left: 60%;
+    }
+
+    @media ${device.desktop} {
+      left: 90%;
     }
   }
 `;
