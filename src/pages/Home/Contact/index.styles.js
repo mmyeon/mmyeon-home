@@ -16,7 +16,9 @@ export const ContactContainer = styled.div`
 
   box-sizing: border-box;
   padding: 0 2em;
-  padding-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media ${device.tablet} {
     display: flex;
@@ -42,7 +44,7 @@ export const ContactContainer = styled.div`
         `;
     }}
 
-    @media ${device.desktop} {
+    @media ${device.tablet} {
       display: flex;
       flex-direction: row;
     }
@@ -56,6 +58,8 @@ export const ContactContainer = styled.div`
       }
 
       > h1 {
+        text-align: center;
+
         ${(props) => {
           if (props.isVisible)
             return css`
@@ -100,7 +104,7 @@ export const ContactContainer = styled.div`
       width: 14em;
       display: block;
       margin: 0 auto;
-      margin-top: 0.4em;
+      margin-top: 2em;
       opacity: 0;
 
       ${(props) => {
@@ -113,6 +117,9 @@ export const ContactContainer = styled.div`
       @media ${device.tablet} {
         width: 20em;
         margin: 0;
+      }
+
+      @media ${device.desktop} {
         margin-left: 4em;
       }
     }
