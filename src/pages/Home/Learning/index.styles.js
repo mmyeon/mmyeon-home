@@ -34,7 +34,6 @@ export const LearningContainer = styled.div`
       grid-template-columns: 50% 50%;
       align-items: center;
       padding: 0 2em;
-      padding-top: 3.6em;
     }
 
     @media ${device.desktop} {
