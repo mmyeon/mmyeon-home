@@ -55,7 +55,6 @@ export const AboutContainer = styled.div`
         font-weight: 200;
         font-size: 1em;
         line-height: 1.4;
-        margin-bottom: 2em;
 
         ${(props) => {
           if (props.isVisible)
@@ -102,6 +101,7 @@ export const AboutContainer = styled.div`
         font-weight: ${FONT_WEIGHT.regular};
         word-break: keep-all;
         letter-spacing: 0.8px;
+        margin: 0.5em 0;
 
         ${(props) => {
           if (props.isVisible)
@@ -113,7 +113,9 @@ export const AboutContainer = styled.div`
 
         @media ${device.tablet} {
           font-size: 1.5em;
-          word-break: break-all;
+          width: 130%;
+        }
+        @media ${device.desktop} {
           width: 156%;
         }
 
@@ -147,7 +149,7 @@ export const AboutContainer = styled.div`
       position: relative;
       width: 17em;
       left: -1.5em;
-      top: 6.5em;
+      top: 5em;
 
       @media ${device.tablet} {
         width: 24em;
@@ -157,8 +159,8 @@ export const AboutContainer = styled.div`
 
       @media ${device.desktop} {
         width: 33em;
-        left: -2em;
-        top: -7em;
+        left: -1em;
+        top: -16em;
       }
     }
 
