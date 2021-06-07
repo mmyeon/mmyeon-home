@@ -28,6 +28,11 @@ const Container = styled.div`
     border-top: 3px solid ${COLORS.darkGray};
     width: 100%;
 
+    > .project-thumbnail {
+      width: 100%;
+      height: 100%;
+    }
+
     > .project-desc {
       font-size: 1.07em;
       line-height: 1.3;
