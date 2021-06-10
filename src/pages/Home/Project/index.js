@@ -14,9 +14,9 @@ const Project = () => {
   const PROJECT_LIST = [
     {
       title: "DogIn",
-      img: "/assets/images/home/project-dog.png",
+      img: "/assets/images/home/dogIn.png",
       desc: "강아지를 입양하기 전 고려해야 할 부분을 알려주는 프로젝트입니다.",
-      link: "https://dogin.mmyeon.com/",
+      link: "https://github.com/mmyeon/dogin",
     },
     {
       title: "mmyeon.com",

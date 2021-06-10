@@ -4,7 +4,7 @@ import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import Button from "./Button";
 
-const Container = styled.div`
+const Container = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ const Container = styled.div`
   }
 `;
 
-const Index = styled.span`
+const Index = styled.h2`
   background: ${COLORS.yellow};
   font-weight: ${FONT_WEIGHT.extraBold};
   font-size: 1.3em;

@@ -18,7 +18,7 @@ const Gnb = () => {
   }, [windowWidth]);
 
   return (
-    <div>
+    <header>
       {windowWidth >= `${DEVICE_WIDTH_TABLET}` ? (
         <NavBar />
       ) : (
@@ -30,7 +30,7 @@ const Gnb = () => {
           {isNavBarOpen && <NavBar toggleNavBar={toggleNavBar} />}
         </>
       )}
-    </div>
+    </header>
   );
 
   function toggleNavBar() {

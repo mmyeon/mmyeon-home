@@ -7,8 +7,6 @@ const About = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
     root: null,
     rootMargin: "0px",
-    // threshold: 0.8,
-    // threshold: 0.3,
     threshold: 0.1,
   });
 
@@ -17,9 +15,8 @@ const About = () => {
       <div className="content-container">
         <div className="text-container">
           <div className="title-container">
-            {/* TODO: 시맨틱태그 올바르게 개선하기 */}
             <h1 className="name">Miyeon Lim,</h1>
-            <h2>I am</h2>
+            <span className="text-small">I am</span>
             <h1 className="job">Frontend Developer</h1>
           </div>
 

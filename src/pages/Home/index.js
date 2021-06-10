@@ -6,7 +6,7 @@ import Project from "./Project";
 import Contact from "./Contact";
 import Gnb from "../../components/Gnb";
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.main`
   width: 100%;
   height: 100%;
 `;

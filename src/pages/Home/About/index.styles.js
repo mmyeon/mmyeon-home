@@ -52,8 +52,6 @@ export const AboutContainer = styled.div`
       }
 
       > .title-container {
-        font-weight: 200;
-        font-size: 1em;
         line-height: 1.4;
 
         ${(props) => {
@@ -64,21 +62,21 @@ export const AboutContainer = styled.div`
             `;
         }}
 
+        >.text-small {
+          font-size: 1.6em;
+          font-weight: ${FONT_WEIGHT.semiBold};
+
+          @media ${device.tablet} {
+            font-size: 2.2em;
+          }
+        }
+
         > .name {
           font-size: 2.06em;
           font-weight: ${FONT_WEIGHT.bold};
 
           @media ${device.tablet} {
             font-size: 2.4em;
-          }
-        }
-
-        > h2 {
-          font-size: 1.6em;
-          font-weight: ${FONT_WEIGHT.semiBold};
-
-          @media ${device.tablet} {
-            font-size: 2.2em;
           }
         }
 
