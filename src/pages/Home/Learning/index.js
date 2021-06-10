@@ -9,8 +9,6 @@ const Learning = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
     root: null,
     rootMargin: "0px",
-    // threshold: 0.8,
-    // threshold: 0.3,
     threshold: 0.1,
   });
 

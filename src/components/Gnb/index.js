@@ -7,7 +7,8 @@ const Gnb = () => {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  // TODO: 주석 추가
+  // 브라우저 창의 크기가 바뀌면 windowWidth 스테이트 변경하는 코드
+  // 윈도우 창 크기에 따라 다른 컴포넌트 렌더링함
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     setWindowWidth(window.innerWidth);
