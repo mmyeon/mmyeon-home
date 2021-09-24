@@ -14,15 +14,21 @@ const Project = () => {
   const PROJECT_LIST = [
     {
       title: "DogIn",
-      img: "/assets/images/home/dogIn.png",
-      desc: "강아지를 입양하기 전 고려해야 할 부분을 알려주는 프로젝트입니다.",
+      img: "/assets/images/home/dogin.png",
+      desc: "반려견 입양하기 전, 보호자에게 꼭 필요한 체크리스트",
       link: "https://github.com/mmyeon/dogin",
     },
     {
       title: "mmyeon.com",
       img: "/og-img.png",
-      desc: "개인 웹사이트 제작",
-      link: "https://mmyeon.com/",
+      desc: "애니메이션이 들어간 개인 웹사이트",
+      link: "https://github.com/mmyeon/mmyeon-home",
+    },
+    {
+      title: "Yogalim",
+      img: "/assets/images/home/yogalim.png",
+      desc: "신체 통증을 줄여주는 요가를 안내해주는 서비스",
+      link: "https://github.com/mmyeon/yogalim",
     },
   ];
 
