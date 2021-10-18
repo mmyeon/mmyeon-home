@@ -47,14 +47,21 @@ const Container = styled.section`
       margin-top: 0.7em;
     }
 
-    > a > button {
+    > .button-container {
+      display: flex;
       width: 100%;
-      font-size: 1em;
-      transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-      transition: letter-spacing 0.3s;
+      justify-content: space-around;
+      flex-direction: row;
 
-      &:hover {
-        letter-spacing: 6px;
+      > a > button {
+        width: 100%;
+        font-size: 1em;
+        /* transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: letter-spacing 0.3s; */
+
+        &:hover {
+          /* letter-spacing: 6px; */
+        }
       }
     }
   }
@@ -70,16 +77,22 @@ const Index = styled.h2`
   border-bottom: none;
 `;
 
-const CardWithIndex = ({ title, img, desc, link }) => {
+const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
   return (
     <Container>
       <Index>{title}</Index>
       <div className="content">
         <img className="project-thumbnail" src={img} alt="thumbnail" />
         <span className="project-desc">{desc}</span>
-        <a href={link} target="_blank" rel="noreferrer">
-          <Button title="더보기" backgroundColor={`${COLORS.darkGray}`} />
-        </a>
+
+        <div className="button-container">
+          <a href={github} target="_blank" rel="noreferrer">
+            <Button title="깃헙" />
+          </a>
+          <a href={github} target="_blank" rel="noreferrer">
+            <Button title="웹사이트" backgroundColor={`${COLORS.darkGray}`} />
+          </a>
+        </div>
       </div>
     </Container>
   );

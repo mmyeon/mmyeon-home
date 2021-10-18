@@ -16,19 +16,28 @@ const Project = () => {
       title: "DogIn",
       img: "/assets/images/home/dogin.png",
       desc: "반려견 입양하기 전, 보호자에게 꼭 필요한 체크리스트",
-      link: "https://github.com/mmyeon/dogin",
+      links: {
+        website: "",
+        github: "https://github.com/mmyeon/dogin",
+      },
     },
     {
       title: "mmyeon.com",
       img: "/og-img.png",
       desc: "애니메이션이 들어간 개인 웹사이트",
-      link: "https://github.com/mmyeon/mmyeon-home",
+      links: {
+        website: "",
+        github: "https://github.com/mmyeon/mmyeon-home",
+      },
     },
     {
       title: "Yogalim",
       img: "/assets/images/home/yogalim.png",
       desc: "신체 통증을 줄여주는 요가를 안내해주는 서비스",
-      link: "https://github.com/mmyeon/yogalim",
+      links: {
+        website: "",
+        github: "https://github.com/mmyeon/yogalim",
+      },
     },
   ];
 
@@ -63,7 +72,7 @@ const Project = () => {
               title={project.title}
               img={project.img}
               desc={project.desc}
-              link={project.link}
+              links={project.links}
             />
           ))}
         </div>
