@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { FONT_WEIGHT } from "../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const ButtonContainer = styled.button`
-  background: ${(props) => props.backgroundColor};
+  background: ${(props) => props.backgroundColor || `${COLORS.darkGray}`};
+  color: ${(props) => props.color || `${COLORS.white}`};
   padding: 0.6em 2em;
   border: none;
   font-size: 0.75em;
-  color: white;
   border-radius: 0.6em;
   margin-top: 0.4em;
   font-family: "Poppins", sans-serif;
@@ -17,9 +17,11 @@ const ButtonContainer = styled.button`
   text-transform: uppercase;
 `;
 
-const Button = ({ title, backgroundColor }) => {
+const Button = ({ title, backgroundColor, color }) => {
   return (
-    <ButtonContainer backgroundColor={backgroundColor}>{title}</ButtonContainer>
+    <ButtonContainer backgroundColor={backgroundColor} color={color}>
+      {title}
+    </ButtonContainer>
   );
 };
 
