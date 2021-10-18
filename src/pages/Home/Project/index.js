@@ -17,7 +17,7 @@ const Project = () => {
       img: "/assets/images/home/dogin.png",
       desc: "반려견 입양하기 전, 보호자에게 꼭 필요한 체크리스트",
       links: {
-        website: "",
+        website: "https://dogin.mmyeon.com/",
         github: "https://github.com/mmyeon/dogin",
       },
     },
@@ -26,7 +26,7 @@ const Project = () => {
       img: "/og-img.png",
       desc: "애니메이션이 들어간 개인 웹사이트",
       links: {
-        website: "",
+        website: "https://www.mmyeon.com/",
         github: "https://github.com/mmyeon/mmyeon-home",
       },
     },
@@ -35,7 +35,7 @@ const Project = () => {
       img: "/assets/images/home/yogalim.png",
       desc: "신체 통증을 줄여주는 요가를 안내해주는 서비스",
       links: {
-        website: "",
+        website: "https://yogalim.mmyeon.com/",
         github: "https://github.com/mmyeon/yogalim",
       },
     },

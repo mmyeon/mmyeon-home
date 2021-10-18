@@ -89,7 +89,7 @@ const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
           <a href={github} target="_blank" rel="noreferrer">
             <Button title="깃헙" />
           </a>
-          <a href={github} target="_blank" rel="noreferrer">
+          <a href={website} target="_blank" rel="noreferrer">
             <Button title="웹사이트" backgroundColor={`${COLORS.darkGray}`} />
           </a>
         </div>
