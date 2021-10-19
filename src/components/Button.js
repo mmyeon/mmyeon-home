@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
-const ButtonContainer = styled.button`
+const ButtonContainer = styled.a`
   background: ${(props) => props.backgroundColor || `${COLORS.darkGray}`};
   color: ${(props) => props.color || `${COLORS.white}`};
   padding: 0.6em 2em;
@@ -17,9 +17,14 @@ const ButtonContainer = styled.button`
   text-transform: uppercase;
 `;
 
-const Button = ({ title, backgroundColor, color }) => {
+const Button = ({ title, backgroundColor, color, href }) => {
   return (
-    <ButtonContainer backgroundColor={backgroundColor} color={color}>
+    <ButtonContainer
+      href={href}
+      backgroundColor={backgroundColor}
+      color={color}
+      target="_blank"
+    >
       {title}
     </ButtonContainer>
   );
