@@ -24,6 +24,7 @@ const Button = ({ title, backgroundColor, color, href }) => {
       backgroundColor={backgroundColor}
       color={color}
       target="_blank"
+      className="button"
     >
       {title}
     </ButtonContainer>

@@ -1,6 +1,7 @@
 import React from "react";
-import ButtonForSendingEmail from "../../../components/ButtonForSendingEmail";
+import Button from "../../../components/Button";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
+import { COLORS } from "../../../styles/constant";
 import * as Styled from "./index.styles";
 
 const About = () => {
@@ -27,7 +28,11 @@ const About = () => {
             <b> 임미연</b> 입니다.
           </p>
 
-          <ButtonForSendingEmail title="hire me" />
+          <Button
+            title="hire me"
+            href="mailto:mindfulyeon@gmail.com?subject=당신과 함께 일해보고 싶어요."
+            backgroundColor={`${COLORS.orange}`}
+          />
         </div>
 
         <img className="blob" src="/assets/images/home/blob.png" alt="blob" />

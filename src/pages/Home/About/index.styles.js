@@ -131,7 +131,7 @@ export const AboutContainer = styled.div`
         }
       }
 
-      > a {
+      > .button {
         ${(props) => {
           if (props.isVisible)
             return css`
@@ -140,6 +140,17 @@ export const AboutContainer = styled.div`
               display: inline-block;
             `;
         }}
+
+        @media ${device.desktop} {
+          left: 90%;
+        }
+
+        @media ${device.tablet} {
+          position: relative;
+          margin-top: 1em;
+          font-size: 1.2em;
+          left: 60%;
+        }
       }
     }
 
