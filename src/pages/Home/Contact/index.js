@@ -1,8 +1,8 @@
 import React from "react";
 import Title from "../../../components/Title";
-import ButtonWithOutline from "../../../components/ButtonWithOutline";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
+import Button from "../../../components/Button";
 
 const Contact = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -37,7 +37,11 @@ const Contact = () => {
           <ul className="btn-container">
             {CONTACT_LIST.map((contact) => (
               <li key={contact.title}>
-                <ButtonWithOutline title={contact.title} link={contact.link} />
+                <Button
+                  type="withOutline"
+                  title={contact.title}
+                  link={contact.link}
+                />
               </li>
             ))}
           </ul>

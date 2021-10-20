@@ -74,14 +74,14 @@ export const ContactContainer = styled.div`
         margin-top: 0.5em;
         transition: all 0.3s;
 
-        @media ${device.tablet} {
-          max-width: 80%;
-          display: block;
-          margin: 1em auto;
+        > li {
+          .button {
+            display: block;
+          }
         }
 
         ${(props) => {
-          if (props.isVisible)
+          if (props.isVisible) {
             return css`
               > li:nth-child(1) {
                 opacity: 0;
@@ -96,7 +96,14 @@ export const ContactContainer = styled.div`
                 animation: ${reveal} 1s forwards 1s;
               }
             `;
+          }
         }}
+
+        @media ${device.tablet} {
+          max-width: 80%;
+          display: block;
+          margin: 1em auto;
+        }
       }
     }
 

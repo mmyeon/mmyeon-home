@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const ButtonContainer = styled.a`
@@ -15,11 +16,35 @@ const ButtonContainer = styled.a`
   cursor: pointer;
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  ${({ type }) => {
+    if (type === "withOutline") {
+      return css`
+        background: ${COLORS.white};
+        border: 4px solid ${COLORS.darkBlue};
+        color: ${COLORS.darkBlue};
+        font-size: 1.75em;
+        width: 100%;
+        padding: 0.3em 0.8em;
+        letter-spacing: 1px;
+        transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        border-radius: 0.5em;
+        text-align: center;
+
+        @media ${device.tablet} {
+          &:hover {
+            letter-spacing: 4px;
+          }
+        }
+      `;
+    }
+  }}
 `;
 
-const Button = ({ title, backgroundColor, color, href }) => {
+const Button = ({ type, title, backgroundColor, color, href }) => {
   return (
     <ButtonContainer
+      type={type}
       href={href}
       backgroundColor={backgroundColor}
       color={color}
