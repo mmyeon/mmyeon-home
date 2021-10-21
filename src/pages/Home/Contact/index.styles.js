@@ -74,12 +74,6 @@ export const ContactContainer = styled.div`
         margin-top: 0.5em;
         transition: all 0.3s;
 
-        > li {
-          .button {
-            display: block;
-          }
-        }
-
         ${(props) => {
           if (props.isVisible) {
             return css`

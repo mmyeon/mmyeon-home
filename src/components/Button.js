@@ -29,7 +29,9 @@ const ButtonContainer = styled.a`
         letter-spacing: 1px;
         transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
         border-radius: 0.5em;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media ${device.tablet} {
           &:hover {
