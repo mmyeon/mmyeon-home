@@ -3,6 +3,7 @@ import Title from "../../../components/Title";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
 import Button from "../../../components/Button";
+import { COLORS } from "../../../styles/constant";
 
 const Contact = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -41,6 +42,7 @@ const Contact = () => {
                   type="withOutline"
                   title={contact.title}
                   href={contact.link}
+                  color={`${COLORS.darkBlue}`}
                 />
               </li>
             ))}
