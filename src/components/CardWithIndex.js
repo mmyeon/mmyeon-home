@@ -53,15 +53,8 @@ const Container = styled.section`
       justify-content: space-around;
       flex-direction: row;
 
-      > a > button {
-        width: 100%;
+      > a {
         font-size: 1em;
-        /* transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-        transition: letter-spacing 0.3s; */
-
-        &:hover {
-          /* letter-spacing: 6px; */
-        }
       }
     }
   }
@@ -86,12 +79,20 @@ const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
         <span className="project-desc">{desc}</span>
 
         <div className="button-container">
-          <a href={github} target="_blank" rel="noreferrer">
-            <Button title="깃헙" />
-          </a>
-          <a href={website} target="_blank" rel="noreferrer">
-            <Button title="웹사이트" backgroundColor={`${COLORS.darkGray}`} />
-          </a>
+          <Button
+            className="github-button"
+            type="withOutline"
+            title={<i className="fab fa-github fa-lg"></i>}
+            href={github}
+            color={`${COLORS.darkGray}`}
+          />
+
+          <Button
+            className="wesite-button"
+            title="웹사이트"
+            href={website}
+            backgroundColor={`${COLORS.darkGray}`}
+          />
         </div>
       </div>
     </Container>
