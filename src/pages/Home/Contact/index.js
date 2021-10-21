@@ -40,7 +40,7 @@ const Contact = () => {
                 <Button
                   type="withOutline"
                   title={contact.title}
-                  link={contact.link}
+                  href={contact.link}
                 />
               </li>
             ))}
