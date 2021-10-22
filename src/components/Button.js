@@ -21,11 +21,11 @@ const ButtonContainer = styled.a`
     if (type === "withOutline") {
       return css`
         background: ${COLORS.white};
-        border: 4px solid ${(props) => props.color};
+        border: 3px solid ${(props) => props.color};
         color: ${(props) => props.color};
         font-size: 1.75em;
-        width: 100%;
         padding: 0.3em 0.8em;
+
         letter-spacing: 1px;
         transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
         border-radius: 0.5em;

@@ -49,12 +49,23 @@ const Container = styled.section`
 
     > .button-container {
       display: flex;
-      width: 100%;
-      justify-content: space-around;
-      flex-direction: row;
+      justify-content: space-evenly;
 
       > a {
         font-size: 1em;
+        padding: 0.5em 0.8em;
+      }
+
+      > a:first-child {
+        flex: 1;
+      }
+
+      > a + a {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.8em;
       }
     }
   }
@@ -80,7 +91,6 @@ const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
 
         <div className="button-container">
           <Button
-            className="github-button"
             type="withOutline"
             title={<i className="fab fa-github fa-lg"></i>}
             href={github}
@@ -88,7 +98,6 @@ const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
           />
 
           <Button
-            className="wesite-button"
             title="웹사이트"
             href={website}
             backgroundColor={`${COLORS.darkGray}`}
