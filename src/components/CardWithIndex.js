@@ -54,6 +54,13 @@ const Container = styled.section`
       > a {
         font-size: 1em;
         padding: 0.5em 0.8em;
+
+        @media ${device.tablet} {
+          &:hover {
+            box-shadow: 0em 0.5em 0.5em -0.4em ${COLORS.darkGray};
+            transform: translateY(-0.15em);
+          }
+        }
       }
 
       > a:first-child {
