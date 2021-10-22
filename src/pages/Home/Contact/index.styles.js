@@ -74,6 +74,14 @@ export const ContactContainer = styled.div`
         margin-top: 0.5em;
         transition: all 0.3s;
 
+        > li > a {
+          @media ${device.tablet} {
+            &:hover {
+              letter-spacing: 4px;
+            }
+          }
+        }
+
         ${(props) => {
           if (props.isVisible) {
             return css`

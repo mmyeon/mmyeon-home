@@ -32,12 +32,6 @@ const ButtonContainer = styled.a`
         display: flex;
         align-items: center;
         justify-content: center;
-
-        @media ${device.tablet} {
-          &:hover {
-            letter-spacing: 4px;
-          }
-        }
       `;
     }
   }}
