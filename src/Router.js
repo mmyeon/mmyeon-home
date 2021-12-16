@@ -10,7 +10,6 @@ const DefaultRouter = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/resume" component={Resume} />
-
         <Route component={PageNotFound} />
       </Switch>
     </Router>
