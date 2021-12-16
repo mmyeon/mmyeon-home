@@ -29,8 +29,8 @@ const About = () => {
           </p>
 
           <Button
-            title="hire me"
-            href="mailto:mindfulyeon@gmail.com?subject=당신과 함께 일해보고 싶어요."
+            title="Resume"
+            href="https://ritzy-phalange-090.notion.site/48592773e6cf4d3396d7ce80fa3bf84a"
             backgroundColor={`${COLORS.orange}`}
           />
         </div>
