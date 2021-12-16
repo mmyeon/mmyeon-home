@@ -17,7 +17,7 @@ const Contact = () => {
 
     {
       title: "resume",
-      link: "https://www.notion.so/resume-1e7bd77786b34a6da0b3f0dfa2c16dcf",
+      link: "https://ritzy-phalange-090.notion.site/48592773e6cf4d3396d7ce80fa3bf84a",
     },
     {
       title: "send email",
