@@ -1,8 +1,17 @@
-import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 import Button from "./Button";
+
+interface CardWithIndexProps {
+  title: string;
+  img: string;
+  desc: string;
+  links: {
+    website: string;
+    github: string;
+  };
+}
 
 const Container = styled.section`
   position: relative;
@@ -88,7 +97,12 @@ const Index = styled.h2`
   border-bottom: none;
 `;
 
-const CardWithIndex = ({ title, img, desc, links: { website, github } }) => {
+const CardWithIndex = ({
+  title,
+  img,
+  desc,
+  links: { website, github },
+}: CardWithIndexProps) => {
   return (
     <Container>
       <Index>{title}</Index>

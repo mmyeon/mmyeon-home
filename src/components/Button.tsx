@@ -1,10 +1,19 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
+interface ButtonProps {
+  type?: "withOutline";
+  href: string;
+  title: string | JSX.Element;
+  color?: string;
+  backgroundColor?: string;
+}
+
+type ButtonContainerProps = Omit<ButtonProps, "title">;
+
 const ButtonContainer = styled.a`
-  background: ${(props) => props.backgroundColor || `${COLORS.darkGray}`};
+  background: ${(props: ButtonContainerProps) =>
+    props.backgroundColor || `${COLORS.darkGray}`};
   color: ${(props) => props.color || `${COLORS.white}`};
   padding: 0.6em 2em;
   border: none;
@@ -21,7 +30,7 @@ const ButtonContainer = styled.a`
     if (type === "withOutline") {
       return css`
         background: ${COLORS.white};
-        border: 3px solid ${(props) => props.color};
+        border: 3px solid ${(props: ButtonContainerProps) => props.color};
         color: ${(props) => props.color};
         font-size: 1.75em;
         padding: 0.3em 0.8em;
@@ -37,7 +46,7 @@ const ButtonContainer = styled.a`
   }}
 `;
 
-const Button = ({ type, title, backgroundColor, color, href }) => {
+const Button = ({ type, title, backgroundColor, color, href }: ButtonProps) => {
   return (
     <ButtonContainer
       type={type}
