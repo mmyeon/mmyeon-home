@@ -21,7 +21,7 @@ export const LearningContainer = styled.div`
     position: relative;
     transition: opacity 0.3s;
 
-    ${(props) => {
+    ${(props: { isVisible: boolean }) => {
       if (!props.isVisible)
         return css`
           opacity: 0;

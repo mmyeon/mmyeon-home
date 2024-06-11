@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HamburgerBtn from "./HamburgerBtn";
 import NavBar from "./NavBar";
 import { DEVICE_WIDTH_TABLET } from "../../device";
@@ -20,7 +20,7 @@ const Gnb = () => {
 
   return (
     <header>
-      {windowWidth >= `${DEVICE_WIDTH_TABLET}` ? (
+      {windowWidth >= Number(`${DEVICE_WIDTH_TABLET}`) ? (
         <NavBar />
       ) : (
         <>
@@ -28,6 +28,7 @@ const Gnb = () => {
             toggleNavBar={toggleNavBar}
             isNavBarOpen={isNavBarOpen}
           />
+
           {isNavBarOpen && <NavBar toggleNavBar={toggleNavBar} />}
         </>
       )}

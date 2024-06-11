@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { FONT_WEIGHT } from "../styles/constant";
@@ -20,7 +19,7 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const Title = ({ text }) => {
+const Title = ({ text }: { text: string }) => {
   return <StyledTitle>{text}</StyledTitle>;
 };
 

@@ -1,10 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 
-export const useTargetOnScreen = (options) => {
+export const useTargetOnScreen = (
+  options: IntersectionObserverInit
+): [React.MutableRefObject<null>, boolean] => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
 
-  const callback = (entries) => {
+  const callback = (entries: IntersectionObserverEntry[]) => {
     const [entry] = entries;
 
     if (entry.isIntersecting) {
@@ -27,7 +29,7 @@ export const useTargetOnScreen = (options) => {
         observer.unobserve(targetElem);
       }
     };
-  }, [containerRef]);
+  }, [containerRef, options]);
 
   return [containerRef, isVisible];
 };

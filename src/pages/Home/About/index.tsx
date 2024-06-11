@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../../../components/Button";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import { COLORS } from "../../../styles/constant";

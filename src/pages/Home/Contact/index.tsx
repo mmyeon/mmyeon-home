@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "../../../components/Title";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";

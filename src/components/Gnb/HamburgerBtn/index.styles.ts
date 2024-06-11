@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../device";
 import { COLORS } from "../../../styles/constant";
+import { HamburgerBtnProps } from ".";
 
 export const HamburgerBtnContainer = styled.div`
   position: fixed;
@@ -10,7 +11,7 @@ export const HamburgerBtnContainer = styled.div`
   right: 0;
   z-index: 30;
 
-  ${(props) =>
+  ${(props: Pick<HamburgerBtnProps, "isNavBarOpen">) =>
     props.isNavBarOpen &&
     css`
       border: 3px solid ${COLORS.darkGray};

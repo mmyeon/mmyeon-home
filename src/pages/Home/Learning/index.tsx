@@ -1,4 +1,3 @@
-import React from "react";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import RoundedRectangle from "../../../components/RoundedRectangle";
 import Title from "../../../components/Title";

@@ -1,7 +1,6 @@
-import React from "react";
 import * as Styled from "./index.styles";
 
-const NavBar = ({ toggleNavBar }) => {
+const NavBar = ({ toggleNavBar }: { toggleNavBar?: () => void }) => {
   const NAV_BAR_LIST = ["home", "learning", "project", "contact"];
 
   return (

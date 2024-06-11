@@ -1,12 +1,20 @@
-import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
+interface RoundedRectangleProps {
+  title: string;
+  className: string;
+  url: string;
+  backgroundColor: string;
+}
+
+type ContainerProps = Pick<RoundedRectangleProps, "backgroundColor">;
+
 const Container = styled.a`
   width: 5.6em;
   height: 5.8em;
-  background: ${(props) => props.backgroundColor};
+  background: ${(props: ContainerProps) => props.backgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +36,12 @@ const Container = styled.a`
   }
 `;
 
-const RoundedRectangle = ({ title, className, url, backgroundColor }) => {
+const RoundedRectangle = ({
+  title,
+  className,
+  url,
+  backgroundColor,
+}: RoundedRectangleProps) => {
   return (
     <Container
       role="button"

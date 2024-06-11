@@ -37,7 +37,7 @@ export const ContactContainer = styled.div`
   > .content-wrapper {
     transition: opacity 0.3s;
 
-    ${(props) => {
+    ${(props: { isVisible: boolean }) => {
       if (!props.isVisible)
         return css`
           opacity: 0;

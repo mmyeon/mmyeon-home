@@ -22,7 +22,7 @@ export const AboutContainer = styled.div`
     margin: 0 auto;
     transition: opacity 0.3s;
 
-    ${(props) => {
+    ${(props: { isVisible: boolean }) => {
       if (!props.isVisible) {
         return css`
           opacity: 0;

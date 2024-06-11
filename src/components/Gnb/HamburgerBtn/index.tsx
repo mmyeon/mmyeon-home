@@ -1,7 +1,11 @@
-import React from "react";
 import * as Styled from "./index.styles";
 
-const HamburgerBtn = ({ toggleNavBar, isNavBarOpen }) => {
+export interface HamburgerBtnProps {
+  toggleNavBar: () => void;
+  isNavBarOpen: boolean;
+}
+
+const HamburgerBtn = ({ toggleNavBar, isNavBarOpen }: HamburgerBtnProps) => {
   return (
     <Styled.HamburgerBtnContainer isNavBarOpen={isNavBarOpen}>
       <div className="menu-btn-burger" onClick={toggleNavBar}></div>
