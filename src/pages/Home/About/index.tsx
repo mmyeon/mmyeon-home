@@ -21,7 +21,7 @@ const About = () => {
           </div>
 
           <p className="desc">
-            <span className="highlight">요가</span>와{" "}
+            <span className="highlight">역도</span>와{" "}
             <span className="highlight">개</span>를 사랑하고{" "}
             <span className="highlight">지속적인 성장</span>을 추구하는 개발자
             <b> 임미연</b> 입니다.
