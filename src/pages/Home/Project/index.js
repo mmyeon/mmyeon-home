@@ -13,7 +13,16 @@ const Project = () => {
 
   const PROJECT_LIST = [
     {
-      title: "DogIn",
+      title: "역도인",
+      img: "/assets/images/home/yeokdoin.svg",
+      desc: "역도 훈련을 위한 자세 분석 및 플레이트 계산 서비스",
+      links: {
+        website: "https://yeokdo-in.mmyeon.com/",
+        github: "https://github.com/mmyeon/YeokdoIn",
+      },
+    },
+    {
+      title: "도그인",
       img: "/assets/images/home/dogin.png",
       desc: "반려견 입양하기 전, 보호자에게 꼭 필요한 체크리스트",
       links: {
@@ -21,17 +30,9 @@ const Project = () => {
         github: "https://github.com/mmyeon/dogin",
       },
     },
+
     {
-      title: "mmyeon.com",
-      img: "/og-img.png",
-      desc: "애니메이션이 들어간 개인 웹사이트",
-      links: {
-        website: "https://www.mmyeon.com/",
-        github: "https://github.com/mmyeon/mmyeon-home",
-      },
-    },
-    {
-      title: "Yogalim",
+      title: "요가림",
       img: "/assets/images/home/yogalim.png",
       desc: "신체 통증을 줄여주는 요가를 안내해주는 서비스",
       links: {

@@ -14,6 +14,8 @@ const About = () => {
     <Styled.AboutContainer id="home" ref={containerRef} isVisible={isVisible}>
       <div className="content-container">
         <div className="text-container">
+          <img className="blob" src="/assets/images/home/blob.png" alt="blob" />
+
           <div className="title-container">
             <h1 className="name">Miyeon Lim,</h1>
             <span className="text-small">I am</span>
@@ -34,12 +36,10 @@ const About = () => {
           />
         </div>
 
-        <img className="blob" src="/assets/images/home/blob.png" alt="blob" />
-
         <img
-          className="walking-girl"
-          src="/assets/images/home/landing-main.png"
-          alt="walking girl"
+          className="powerlifting"
+          src="/assets/images/home/yeokdo-jerk.png"
+          alt="powerlifting"
         />
 
         <img

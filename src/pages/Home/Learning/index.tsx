@@ -11,24 +11,6 @@ const Learning = () => {
     threshold: 0.1,
   });
 
-  const LINK_LIST = [
-    {
-      title: "블로그",
-      url: "https://til.mmyeon.com/",
-      backgroundColor: `${COLORS.yellow}`,
-    },
-    {
-      title: "읽은 책 목록",
-      url: "https://www.notion.so/e91e7e90a79f46bc92a66b584f34c0f0?v=b0de36586be345b1bea7d355e094f64a",
-      backgroundColor: `${COLORS.lightGreen}`,
-    },
-    {
-      title: "WILT",
-      url: "https://til.mmyeon.com/",
-      backgroundColor: `${COLORS.orange}`,
-    },
-  ];
-
   return (
     <Styled.LearningContainer
       id="learning"
@@ -47,21 +29,16 @@ const Learning = () => {
             />
 
             <span className="avatar-desc">
-              WILT(What I Learnt Today)를 기록하며 매일매일 성장하고 있습니다.
+              개발하면서 만난 고민을 글로 기록하고 있습니다.
             </span>
           </div>
 
-          <div className="links">
-            {LINK_LIST.map((item) => (
-              <RoundedRectangle
-                key={item.title}
-                title={item.title}
-                url={item.url}
-                backgroundColor={item.backgroundColor}
-                className="block"
-              />
-            ))}
-          </div>
+          <RoundedRectangle
+            key="블로그"
+            title="블로그 보러 가기"
+            url="https://blog.mmyeon.com/"
+            backgroundColor={COLORS.yellow}
+          />
         </div>
 
         <img
