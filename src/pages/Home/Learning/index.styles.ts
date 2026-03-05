@@ -43,6 +43,10 @@ export const LearningContainer = styled.div`
 
     .content {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       > h1 {
         ${(props) => {
@@ -86,6 +90,7 @@ export const LearningContainer = styled.div`
           font-weight: ${FONT_WEIGHT.regular};
           line-height: 1.3;
           margin-top: 1em;
+          white-space: pre-line;
 
           @media ${device.tablet} {
             font-size: 1.3em;
@@ -93,6 +98,17 @@ export const LearningContainer = styled.div`
             text-align: left;
           }
         }
+      }
+
+      > a {
+        ${(props) => {
+          if (props.isVisible) {
+            return css`
+              opacity: 0;
+              animation: ${reveal} 1s forwards 1s;
+            `;
+          }
+        }}
       }
 
       > .links {

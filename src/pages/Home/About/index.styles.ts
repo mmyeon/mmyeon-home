@@ -14,10 +14,16 @@ export const AboutContainer = styled.div`
   background: ${COLORS.yellow};
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   > .content-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
+    gap: 1em;
+    width: 100%;
     max-width: 250px;
     margin: 0 auto;
     transition: opacity 0.3s;
@@ -31,27 +37,41 @@ export const AboutContainer = styled.div`
     }}
 
     @media ${device.tablet} {
+      grid-template-columns: 1fr 1fr;
       max-width: 600px;
-      margin: 0 auto;
     }
 
     @media ${device.desktop} {
       max-width: 900px;
-      margin: 0 auto;
     }
 
     > .text-container {
-      position: absolute;
-      z-index: 10;
-      top: 50%;
-      transform: translate(0, -50%);
-      width: 13em;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      @media ${device.tablet} {
-        width: 20em;
+      > .blob {
+        position: absolute;
+        z-index: 0;
+        width: 120%;
+        top: -15%;
+        left: -10%;
+        pointer-events: none;
+
+        @media ${device.tablet} {
+          width: 130%;
+        }
+
+        @media ${device.desktop} {
+          width: 150%;
+        }
       }
 
       > .title-container {
+        position: relative;
+        z-index: 1;
         line-height: 1.4;
 
         ${(props) => {
@@ -87,13 +107,13 @@ export const AboutContainer = styled.div`
 
           @media ${device.tablet} {
             font-size: 3.3em;
-            width: 200%;
-            word-break: break-all;
           }
         }
       }
 
       > .desc {
+        position: relative;
+        z-index: 1;
         font-size: 1.06em;
         line-height: 1.6;
         font-weight: ${FONT_WEIGHT.regular};
@@ -111,10 +131,6 @@ export const AboutContainer = styled.div`
 
         @media ${device.tablet} {
           font-size: 1.5em;
-          width: 130%;
-        }
-        @media ${device.desktop} {
-          width: 156%;
         }
 
         .highlight {
@@ -132,6 +148,9 @@ export const AboutContainer = styled.div`
       }
 
       > .button {
+        position: relative;
+        z-index: 1;
+
         ${(props) => {
           if (props.isVisible)
             return css`
@@ -141,44 +160,15 @@ export const AboutContainer = styled.div`
             `;
         }}
 
-        @media ${device.desktop} {
-          left: 90%;
-        }
-
         @media ${device.tablet} {
-          position: relative;
           margin-top: 1em;
           font-size: 1.2em;
-          left: 60%;
         }
       }
     }
 
-    > .blob {
-      position: relative;
-      width: 17em;
-      left: -1.5em;
-      top: 5em;
-
-      @media ${device.tablet} {
-        width: 24em;
-        left: -1em;
-        top: 7em;
-      }
-
-      @media ${device.desktop} {
-        width: 33em;
-        left: -1em;
-        top: -16em;
-      }
-    }
-
-    > .walking-girl {
-      position: relative;
-      width: 16em;
-      padding: 3em 0;
-      right: 9.5em;
-      top: 3em;
+    > .powerlifting {
+      width: 100%;
 
       ${(props) => {
         if (props.isVisible)
@@ -187,16 +177,6 @@ export const AboutContainer = styled.div`
             animation: ${flyInFromRight} 1s forwards 1s;
           `;
       }}
-
-      @media ${device.tablet} {
-        width: 30em;
-        right: 10em;
-      }
-
-      @media ${device.desktop} {
-        width: 42em;
-        right: 10em;
-      }
     }
 
     > .downward-arrow {

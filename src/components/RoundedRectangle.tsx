@@ -4,7 +4,6 @@ import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 interface RoundedRectangleProps {
   title: string;
-  className: string;
   url: string;
   backgroundColor: string;
 }
@@ -12,9 +11,9 @@ interface RoundedRectangleProps {
 type ContainerProps = Pick<RoundedRectangleProps, "backgroundColor">;
 
 const Container = styled.a`
-  width: 5.6em;
-  height: 5.8em;
+  width: fit-content;
   background: ${(props: ContainerProps) => props.backgroundColor};
+  padding: 0.5em 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,11 +22,11 @@ const Container = styled.a`
   z-index: 1;
   font-weight: ${FONT_WEIGHT.semiBold};
   font-size: 1.12em;
-  padding: 0 0.5em;
   line-height: 1.2;
   letter-spacing: 0.7px;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
 
   @media ${device.desktop} {
     &:hover {
@@ -38,7 +37,6 @@ const Container = styled.a`
 
 const RoundedRectangle = ({
   title,
-  className,
   url,
   backgroundColor,
 }: RoundedRectangleProps) => {
@@ -46,7 +44,6 @@ const RoundedRectangle = ({
     <Container
       role="button"
       href={url}
-      className={className}
       target="_blank"
       backgroundColor={backgroundColor}
     >
