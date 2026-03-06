@@ -3,6 +3,7 @@ import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
 import Button from "../../../components/Button";
 import { COLORS } from "../../../styles/constant";
+import { LINKS } from "../../../constants/links";
 
 const Contact = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -12,15 +13,15 @@ const Contact = () => {
   });
 
   const CONTACT_LIST = [
-    { title: "github", link: "https://github.com/mmyeon" },
+    { title: "github", link: LINKS.github },
 
     {
       title: "resume",
-      link: "https://ritzy-phalange-090.notion.site/48592773e6cf4d3396d7ce80fa3bf84a",
+      link: LINKS.resume,
     },
     {
       title: "send email",
-      link: "mailto:mindfulyeon@gmail.com?subject=당신과 함께 일해보고 싶어요.",
+      link: `mailto:${LINKS.email}?subject=당신과 함께 일해보고 싶어요.`,
     },
   ];
 

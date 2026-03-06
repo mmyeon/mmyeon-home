@@ -3,6 +3,7 @@ import CardWithIndex from "../../../components/CardWithIndex";
 import Title from "../../../components/Title";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import * as Styled from "./index.styles";
+import { LINKS } from "../../../constants/links";
 
 const Project = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -16,29 +17,20 @@ const Project = () => {
       title: "역도인",
       img: "/assets/images/home/yeokdoin.svg",
       desc: "역도 훈련을 위한 자세 분석 및 플레이트 계산 서비스",
-      links: {
-        website: "https://yeokdo-in.mmyeon.com/",
-        github: "https://github.com/mmyeon/YeokdoIn",
-      },
+      links: LINKS.projects.yeokdoIn,
     },
     {
       title: "도그인",
       img: "/assets/images/home/dogin.png",
       desc: "반려견 입양하기 전, 보호자에게 꼭 필요한 체크리스트",
-      links: {
-        website: "https://dogin.mmyeon.com/",
-        github: "https://github.com/mmyeon/dogin",
-      },
+      links: LINKS.projects.dogin,
     },
 
     {
       title: "요가림",
       img: "/assets/images/home/yogalim.png",
       desc: "신체 통증을 줄여주는 요가를 안내해주는 서비스",
-      links: {
-        website: "https://yogalim.mmyeon.com/",
-        github: "https://github.com/mmyeon/yogalim",
-      },
+      links: LINKS.projects.yogalim,
     },
   ];
 

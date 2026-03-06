@@ -2,6 +2,7 @@ import Button from "../../../components/Button";
 import { useTargetOnScreen } from "../../../hooks/useTargetOnScreen";
 import { COLORS } from "../../../styles/constant";
 import * as Styled from "./index.styles";
+import { LINKS } from "../../../constants/links";
 
 const About = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -31,7 +32,7 @@ const About = () => {
 
           <Button
             title="Resume"
-            href="https://ritzy-phalange-090.notion.site/48592773e6cf4d3396d7ce80fa3bf84a"
+            href={LINKS.resume}
             backgroundColor={`${COLORS.orange}`}
           />
         </div>

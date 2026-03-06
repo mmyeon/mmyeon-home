@@ -3,6 +3,7 @@ import RoundedRectangle from "../../../components/RoundedRectangle";
 import Title from "../../../components/Title";
 import * as Styled from "./index.styles";
 import { COLORS } from "../../../styles/constant";
+import { LINKS } from "../../../constants/links";
 
 const Learning = () => {
   const [containerRef, isVisible] = useTargetOnScreen({
@@ -36,7 +37,7 @@ const Learning = () => {
           <RoundedRectangle
             key="블로그"
             title="블로그 보러 가기"
-            url="https://blog.mmyeon.com/"
+            url={LINKS.blog}
             backgroundColor={COLORS.yellow}
           />
         </div>

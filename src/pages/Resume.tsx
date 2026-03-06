@@ -1,9 +1,9 @@
 import { useEffect } from "react";
+import { LINKS } from "../constants/links";
 
 const Resume = () => {
   useEffect(() => {
-    window.location.href =
-      "https://ritzy-phalange-090.notion.site/48592773e6cf4d3396d7ce80fa3bf84a";
+    window.location.href = LINKS.resume;
   }, []);
 
   return null;
